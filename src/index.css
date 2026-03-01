@@ -756,19 +756,25 @@ button.primary:hover {
 }
 
 .footer-copyright {
-  font-size: 0.6rem;
-  color: var(--steel);
+  font-size: 0.65rem;
+  /* Slightly larger */
+  color: #fafafa;
+  /* Brighter near-white */
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  opacity: 0.8;
+  /* Higher opacity */
 }
 
 .footer-label {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
+  /* Slightly larger */
   color: var(--accent-gold);
   margin-bottom: var(--space-sm);
   letter-spacing: 0.15em;
   font-weight: 700;
-  opacity: 0.6;
+  opacity: 0.9;
+  /* Much more visible */
 }
 
 .link-group {
@@ -780,17 +786,22 @@ button.primary:hover {
 
 .link-group .text-link,
 .footer-email {
-  font-size: 0.75rem;
-  color: var(--steel-light) !important;
+  font-size: 0.8rem;
+  /* Larger font */
+  color: #ffffff !important;
+  /* Pure white for links */
   text-decoration: none;
   transition: all var(--transition-fast);
   text-align: left;
+  opacity: 0.9;
+  font-weight: 500;
 }
 
 .link-group .text-link:hover,
 .footer-email:hover {
   color: var(--accent-gold) !important;
   transform: translateX(4px);
+  opacity: 1;
 }
 
 /* Watchdog Badge */
