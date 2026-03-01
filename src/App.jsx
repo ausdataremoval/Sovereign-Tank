@@ -112,33 +112,41 @@ const App = () => {
       </main>
 
       <footer className="system-footer">
-        <div className="container footer-content">
-          <div className="footer-links">
-            <p className="footer-label">LEGAL & COMPLIANCE</p>
+        <div className="container footer-content-grid">
+          <div className="footer-brand-section">
+            <div className="footer-logo">SOVEREIGN TANK</div>
+            <div className="footer-copyright">
+              &copy; {new Date().getFullYear()} OPERATIONS. ALL RIGHTS RESERVED.
+            </div>
+          </div>
+
+          <div className="footer-links-section">
+            <p className="footer-label">COMPLIANCE PROTOCOLS</p>
             <div className="link-group">
               <button
                 className="text-link"
                 onClick={() => setLegalContent('privacy')}
               >
-                Privacy Policy
+                PRIVACY_PROT
               </button>
               <button
                 className="text-link"
                 onClick={() => setLegalContent('terms')}
               >
-                Terms of Service
+                TERMS_OF_SERV
               </button>
-              <a href="mailto:hello@ausdataremoval.com.au">Contact: hello@ausdataremoval.com.au</a>
+              <a href="mailto:hello@ausdataremoval.com.au" className="footer-email">
+                CONTACT: hello@ausdataremoval.com.au
+              </a>
             </div>
           </div>
-          <div className="watchdog-footer">
-            <div className="watchdog-status-static">
+
+          <div className="footer-security-section">
+            <div className="watchdog-badge">
               <div className="pulse-indicator"></div>
-              [WATCHDOG: SECURE]
+              <span className="badge-text">WATCHDOG: SECURE</span>
+              <span className="badge-id">ID: ADR-P1-ALPHA</span>
             </div>
-          </div>
-          <div className="footer-copyright">
-            &copy; {new Date().getFullYear()} SOVEREIGN TANK OPERATIONS. ALL RIGHTS RESERVED.
           </div>
         </div>
       </footer>
