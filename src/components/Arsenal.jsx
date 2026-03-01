@@ -5,26 +5,44 @@ const Arsenal = () => {
         {
             id: 1,
             name: 'ADR Core Patch',
+            for: 'High-stakes professionals & executives',
             price: 'AUD $1950.00',
-            desc: 'Complete digital eradication & sovereignty audit.',
-            slug: 'hve0sbqo', // Client's provided production slug
-            specs: ['Global purge', 'ADR-P1 Certified', 'Full Deed']
+            desc: 'The gold standard for complete digital eradication and sovereignty.',
+            slug: 'hve0sbqo',
+            specs: [
+                'Global metadata & footprint purge',
+                'ADR-P1 Certification & Digital Deed',
+                'Priority Watchdog Monitoring (30 days)',
+                'Zero-knowledge compliance audit'
+            ]
         },
         {
             id: 2,
             name: 'Protocol Alpha',
+            for: 'Small teams & secure labs',
             price: 'AUD $350.00',
-            desc: 'Encrypted communication utility for teams.',
-            slug: 'protocol-alpha', // Placeholder for duplicated form slug
-            specs: ['P2P routing', 'Zero-knowledge', 'Lifetime access']
+            desc: 'Encrypted communication utility for secure node coordination.',
+            slug: 'protocol-alpha',
+            specs: [
+                'P2P encrypted routing protocol',
+                'Lifetime node access license',
+                'Zinc-alloy physical auth token',
+                'Team-wide secure handshake logic'
+            ]
         },
         {
             id: 3,
             name: 'Sentinel Badge',
+            for: 'Individual operators',
             price: 'AUD $95.00',
-            desc: 'Physical proof of digital sovereignty.',
-            slug: 'sentinel-badge', // Placeholder for duplicated form slug
-            specs: ['NFC Enabled', 'Matte Black Finish', 'ID: ADR-P1-001']
+            desc: 'Physical proof of digital sovereignty and ADR-P1 status.',
+            slug: 'sentinel-badge',
+            specs: [
+                'NFC-enabled secure verification',
+                'Matte black aerospace-grade finish',
+                'Unique serial ID (ADR-P1-001)',
+                'Sovereign Tank operative status'
+            ]
         },
     ];
 
@@ -37,17 +55,23 @@ const Arsenal = () => {
                         <div className="price">{product.price}</div>
                     </div>
 
-                    <p style={{ color: 'var(--text-muted)', marginBottom: 'var(--space-md)', fontSize: '0.9rem' }}>
+                    <p className="product-for">FOR: {product.for}</p>
+
+                    <p className="product-desc">
                         {product.desc}
                     </p>
 
-                    <ul>
-                        {product.specs.map((spec, i) => (
-                            <li key={i}>{spec}</li>
-                        ))}
-                    </ul>
+                    <div className="product-inclusions">
+                        <p className="inclusions-label">INCLUSIONS:</p>
+                        <ul>
+                            {product.specs.map((spec, i) => (
+                                <li key={i}>{spec}</li>
+                            ))}
+                        </ul>
+                    </div>
 
                     <button
+                        className="acquire-btn"
                         style={{ width: '100%', marginTop: 'auto' }}
                         data-paperform-id={product.slug}
                         data-popup-button="1"
