@@ -813,3 +813,118 @@ button.primary:hover {
     align-items: center;
   }
 }
+
+/* Trust Section */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.trust-card {
+  padding: var(--space-md);
+  text-align: center;
+  transition: border-color var(--transition-fast);
+}
+
+.trust-card:hover {
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.trust-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.trust-title {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.trust-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.security-guarantee {
+  text-align: center;
+  border: 1px dashed rgba(245, 158, 11, 0.2);
+  padding: var(--space-sm);
+  border-radius: 4px;
+}
+
+.guarantee-badge {
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  margin-right: 0.5rem;
+  border: 1px solid var(--accent-gold);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.7rem;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+  flex-direction: column;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(245, 158, 11, 0.1);
+  border-top-color: var(--accent-gold);
+  border-radius: 50%;
+  margin: 0 auto var(--space-md);
+  animation: loading-spin 1s linear infinite;
+}
+
+.loading-text {
+  font-family: var(--font-mono);
+  color: var(--accent-gold);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+.loading-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--steel);
+  margin-top: 0.5rem;
+}
+
+@keyframes loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Legal Links */
+.text-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--steel-light);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.text-link:hover {
+  color: var(--accent-gold);
+  background: none;
+  box-shadow: none;
+}
+
+.legal-modal {
+  border-width: 2px;
+  padding: var(--space-md);
+}

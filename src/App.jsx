@@ -3,9 +3,12 @@ import OperationsTicker from './components/OperationsTicker';
 import Aria from './components/Aria';
 import Arsenal from './components/Arsenal';
 import DeedModal from './components/DeedModal';
+import TrustSection from './components/TrustSection';
 
 const App = () => {
   const [showDeed, setShowDeed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [legalContent, setLegalContent] = useState(null); // 'privacy' | 'terms' | null
 
   useEffect(() => {
     const triggerSuccess = () => {
@@ -71,6 +74,10 @@ const App = () => {
                 className="primary"
                 data-paperform-id="hve0sbqo"
                 data-popup-button="1"
+                onClick={() => {
+                  setIsLoading(true);
+                  setTimeout(() => setIsLoading(false), 2500);
+                }}
               >
                 Initialize Sovereignty Protocol
               </button>
@@ -79,6 +86,9 @@ const App = () => {
 
           <OperationsTicker />
         </section>
+
+        {/* Trust Signals */}
+        <TrustSection />
 
         {/* The Laboratory */}
         <section className="section" id="the-lab">
@@ -106,9 +116,19 @@ const App = () => {
           <div className="footer-links">
             <p className="footer-label">LEGAL & COMPLIANCE</p>
             <div className="link-group">
-              <a href="#privacy">Privacy Policy</a>
-              <a href="#terms">Terms of Service</a>
-              <a href="mailto:support@sovereigntank.com">Contact: support@sovereigntank.com</a>
+              <button
+                className="text-link"
+                onClick={() => setLegalContent('privacy')}
+              >
+                Privacy Policy
+              </button>
+              <button
+                className="text-link"
+                onClick={() => setLegalContent('terms')}
+              >
+                Terms of Service
+              </button>
+              <a href="mailto:hello@ausdataremoval.com.au">Contact: hello@ausdataremoval.com.au</a>
             </div>
           </div>
           <div className="watchdog-footer">
@@ -122,6 +142,44 @@ const App = () => {
           </div>
         </div>
       </footer>
+
+      {/* Loading Overlay */}
+      {isLoading && (
+        <div className="modal-overlay loading-overlay">
+          <div className="loading-content">
+            <div className="loading-spinner"></div>
+            <p className="loading-text">CONNECTING TO SECURE NODE...</p>
+            <p className="loading-sub">ESTABLISHING ADR-P1 PROTOCOL</p>
+          </div>
+        </div>
+      )}
+
+      {/* Legal Modal */}
+      {legalContent && (
+        <div className="modal-overlay" onClick={() => setLegalContent(null)}>
+          <div className="deed-container legal-modal" onClick={e => e.stopPropagation()}>
+            <button className="close-modal" onClick={() => setLegalContent(null)}>&times;</button>
+            <div className="deed-header">
+              <h1>{legalContent === 'privacy' ? 'PRIVACY PROTOCOL' : 'TERMS OF SERVICE'}</h1>
+            </div>
+            <div className="deed-body" style={{ fontSize: '0.8rem' }}>
+              {legalContent === 'privacy' ? (
+                <>
+                  <p>1. DATA COLLECTION: We operate on a zero-knowledge basis. Local parameters are used solely for the eradication process.</p>
+                  <p>2. ENCRYPTION: All transition data is encrypted via 256-bit AES industrial standards.</p>
+                  <p>3. RETENTION: Sovereign Tank retains zero user data post-audit. All session logs are purged upon completion of The Deed.</p>
+                </>
+              ) : (
+                <>
+                  <p>1. SERVICE: Sovereign Tank provides data removal audits as validated by the ADR-P1 certificate.</p>
+                  <p>2. LIABILITY: We provide industrial-grade audits but the user remains the ultimate sovereign of their digital identity.</p>
+                  <p>3. REFUNDS: Due to the immediate nature of data eradication protocols, all sales are final upon issuance of the Deed.</p>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {showDeed && <DeedModal onClose={() => setShowDeed(false)} />}
     </div>
