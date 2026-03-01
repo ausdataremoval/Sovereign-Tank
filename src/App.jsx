@@ -76,10 +76,11 @@ const App = () => {
                 data-popup-button="1"
                 onClick={() => {
                   setIsLoading(true);
-                  setTimeout(() => setIsLoading(false), 2500);
+                  // Ensure loading clears even if popup blocks interaction
+                  setTimeout(() => setIsLoading(false), 3000);
                 }}
               >
-                Initialize Sovereignty Protocol
+                Acquire Sovereignty Protocol
               </button>
             </div>
           </div>

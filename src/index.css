@@ -310,21 +310,35 @@ button.primary:hover {
   -webkit-text-fill-color: transparent;
 }
 
-/* Paperform Centering Fixes */
+/* Paperform Centering & Mobile Fixes */
 .paperform-embed-popup {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  background: rgba(0, 0, 0, 0.8) !important;
+  background: rgba(0, 0, 0, 0.9) !important;
   z-index: 99999 !important;
+  padding: 0 !important;
+  /* Remove constraints for mobile */
 }
 
 .paperform-embed-popup iframe {
   margin: auto !important;
-  position: relative !important;
-  max-height: 90vh !important;
-  border-radius: 12px !important;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  max-height: 100vh !important;
+  /* Ensure it can use full height if needed */
+  width: 100% !important;
+  border-radius: 0 !important;
+  /* Industrial edge on mobile */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8) !important;
+}
+
+@media (min-width: 768px) {
+  .paperform-embed-popup iframe {
+    max-height: 85vh !important;
+    max-width: 800px !important;
+    border-radius: 12px !important;
+  }
 }
 
 
