@@ -42,6 +42,17 @@ const App = () => {
       }
     };
 
+    // Scroll Reveal Observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
     window.addEventListener('message', handleMessage);
     const internalSuccessHandler = () => setShowDeed(true);
     window.addEventListener('paymentSuccess', internalSuccessHandler);
@@ -50,6 +61,7 @@ const App = () => {
       document.body.removeChild(script);
       window.removeEventListener('message', handleMessage);
       window.removeEventListener('paymentSuccess', internalSuccessHandler);
+      observer.disconnect();
     }
   }, []);
 
@@ -63,7 +75,7 @@ const App = () => {
 
       <main className="container">
         {/* Structured Hero for immediate value proposition */}
-        <section className="section" id="hero">
+        <section className="section reveal" id="hero">
           <div className="hero-content">
             <h1 className="hero-title">Eradicate Your Digital Footprint.</h1>
             <p className="hero-subtitle">
@@ -92,7 +104,7 @@ const App = () => {
         <TrustSection />
 
         {/* The Laboratory */}
-        <section className="section" id="the-lab">
+        <section className="section reveal" id="the-lab">
           <h2>The Laboratory</h2>
           <div className="glass-panel lab-panel">
             <p className="lab-status">
@@ -103,7 +115,7 @@ const App = () => {
         </section>
 
         {/* The Arsenal: Product Tiers */}
-        <section className="section" id="the-arsenal">
+        <section className="section reveal" id="the-arsenal">
           <h2>The Arsenal</h2>
           <p className="section-intro">
             Select your tier of digital autonomy. Each patch is ADR-certified and precision-engineered.
