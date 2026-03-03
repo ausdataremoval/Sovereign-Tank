@@ -494,6 +494,49 @@ a:hover {
   font-size: 0.95rem;
 }
 
+/* Mission Section */
+.mission-section {
+  padding: var(--space-2xl) 0;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.mission-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-content h2 {
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
+}
+
+.mission-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+}
+
+.mission-content p {
+  margin-bottom: var(--space-md);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
 /* Guarantee Section */
 .guarantee-section {
   padding: var(--space-xl) 0;

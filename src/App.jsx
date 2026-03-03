@@ -269,6 +269,35 @@ const App = () => {
         </div>
       </section>
 
+      {/* Mission Section */}
+      <section className="mission-section">
+        <div className="container">
+          <div className="mission-content">
+            <h2>Our Mission: Data Sovereignty for All Australians</h2>
+            <p className="mission-lead">
+              Most Australians have no idea how much of their personal information is being 
+              bought, sold, and traded online without their knowledge or consent.
+            </p>
+            <p>
+              We are committed to raising awareness about data privacy and working with others 
+              in the industry to improve data sovereignty for everyday Australians. This is not 
+              just a business for us - it is about giving people back control over their own information.
+            </p>
+            <p>
+              If you are a privacy advocate, journalist, researcher, or organisation working to 
+              improve data rights in Australia, we would love to collaborate. Together, we can 
+              make a real difference.
+            </p>
+            <button 
+              className="btn btn-outline"
+              onClick={() => scrollToSection('contact')}
+            >
+              Partner With Us
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Guarantee Section */}
       <section className="guarantee-section">
         <div className="container">
