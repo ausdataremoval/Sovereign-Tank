@@ -97,16 +97,16 @@ const App = () => {
               <span>100% Australian Team</span>
             </div>
             <div className="trust-item">
-              <LockIcon />
-              <span>Bank-Level Security</span>
+              <UserIcon />
+              <span>Case-by-Case Service</span>
             </div>
             <div className="trust-item">
-              <UserIcon />
-              <span>Manual, Hands-On Service</span>
+              <PhoneIcon />
+              <span>Always Contactable</span>
             </div>
             <div className="trust-item">
               <CheckIcon />
-              <span>Verified Removal Reports</span>
+              <span>Manual, Hands-On Approach</span>
             </div>
           </div>
         </div>
@@ -231,28 +231,36 @@ const App = () => {
               <h2>Why Choose Us</h2>
               <p className="lead">
                 We are not a faceless tech company running automated scripts. 
-                We are Australian privacy specialists who personally handle every case.
+                We are Australian privacy specialists who personally handle every case, 
+                because every situation is different.
               </p>
               <div className="about-features">
                 <div className="about-feature">
-                  <h4>Founder-Led Service</h4>
+                  <h4>Case-by-Case Approach</h4>
                   <p>
-                    Every client works directly with our founder. No outsourcing, 
-                    no call centres, no automated systems pretending to be human.
+                    Every client's situation is unique. We take the time to understand 
+                    your specific concerns and tailor our approach accordingly.
                   </p>
                 </div>
                 <div className="about-feature">
-                  <h4>Manual, Not Automated</h4>
+                  <h4>Always Contactable</h4>
                   <p>
-                    Automated tools miss things. We manually search and verify 
-                    each data source, ensuring nothing slips through.
+                    You can reach us directly. No ticket systems, no chatbots, no waiting. 
+                    Real people who answer your questions and keep you updated.
                   </p>
                 </div>
                 <div className="about-feature">
-                  <h4>Australian-Based</h4>
+                  <h4>Founder-Led, Manual Service</h4>
                   <p>
-                    Your data stays in Australia. We understand local privacy laws 
-                    and can provide ongoing support in your timezone.
+                    Our founder personally oversees every case. We manually search and verify 
+                    each data source - no automated tools that miss things.
+                  </p>
+                </div>
+                <div className="about-feature">
+                  <h4>100% Australian</h4>
+                  <p>
+                    Based in Australia, for Australians. We understand local privacy laws 
+                    and provide support in your timezone.
                   </p>
                 </div>
               </div>
@@ -313,8 +321,9 @@ const App = () => {
             <div className="contact-cta">
               <h3>Start Your Free Consultation</h3>
               <p>
-                Book a no-obligation call to discuss your situation 
-                and learn how we can help protect your privacy.
+                We treat every enquiry individually. Book a no-obligation call 
+                to discuss your specific situation and we will give you honest 
+                advice on how we can help.
               </p>
               <button 
                 className="btn btn-primary btn-lg"
