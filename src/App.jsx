@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSecure, setIsSecure] = useState(false);
-  const [exposureEmail, setExposureEmail] = useState('');
-  const [exposureResult, setExposureResult] = useState(null);
-  const [exposureLoading, setExposureLoading] = useState(false);
 
   useEffect(() => {
     // Add Paperform script dynamically
@@ -13,9 +9,6 @@ const App = () => {
     script.src = "https://paperform.co/__embed.min.js";
     script.async = true;
     document.body.appendChild(script);
-
-    // Check if connection is secure
-    setIsSecure(window.location.protocol === 'https:');
 
     return () => {
       document.body.removeChild(script);
@@ -27,50 +20,8 @@ const App = () => {
     setIsMenuOpen(false);
   };
 
-  // Simple exposure check - demonstrates concept
-  // In production, this would connect to a breach database API
-  const checkExposure = async (e) => {
-    e.preventDefault();
-    if (!exposureEmail || !exposureEmail.includes('@')) return;
-    
-    setExposureLoading(true);
-    setExposureResult(null);
-    
-    // Simulate API check (in production, use Have I Been Pwned API or similar)
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // For demo: show educational result that encourages action
-    setExposureResult({
-      checked: true,
-      message: "Your email address likely exists on multiple data broker sites and people-search databases. Most Australians' data is actively being traded without their knowledge.",
-      action: "Get a free consultation to find out exactly where your data appears."
-    });
-    
-    setExposureLoading(false);
-  };
-
   return (
     <div className="site-container">
-      {/* Security Status Bar */}
-      <div className="security-bar">
-        <div className="container">
-          <div className="security-indicators">
-            <div className={`security-indicator ${isSecure ? 'secure' : 'insecure'}`}>
-              <LockIcon />
-              <span>{isSecure ? 'Secure Connection' : 'Connection Not Secure'}</span>
-            </div>
-            <div className="security-indicator secure">
-              <EyeOffIcon />
-              <span>No Tracking</span>
-            </div>
-            <div className="security-indicator secure">
-              <ShieldCheckIcon />
-              <span>Privacy-First</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Navigation */}
       <header className="header">
         <div className="header-inner">
