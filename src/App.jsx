@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [visitCleared, setVisitCleared] = useState(false);
 
   useEffect(() => {
     // Add Paperform script dynamically
@@ -18,6 +19,21 @@ const App = () => {
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
+  };
+
+  // Clear all traces of this visit - we practice what we preach
+  const clearVisit = () => {
+    // Clear localStorage
+    localStorage.clear();
+    // Clear sessionStorage
+    sessionStorage.clear();
+    // Clear all cookies for this domain
+    document.cookie.split(";").forEach((c) => {
+      document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    });
+    // Show confirmation
+    setVisitCleared(true);
+    setTimeout(() => setVisitCleared(false), 3000);
   };
 
   return (
@@ -61,70 +77,71 @@ const App = () => {
           <div className="hero-content">
             <div className="hero-badge">Australian-Owned Privacy Consultancy</div>
             <h1 className="hero-title">
-              Your Personal Data.<br />
-              <span className="text-accent">Removed Permanently.</span>
+              Your Personal Data Is Being Sold.<br />
+              <span className="text-accent">We Help You Take It Back.</span>
             </h1>
             <p className="hero-subtitle">
-              Hands-on, manual data removal by Australian privacy specialists. 
-              We personally search, locate, and remove your information from data brokers, 
-              people-search sites, and online databases.
+              Right now, your name, address, phone number, and more are likely listed on 
+              data broker sites - available to anyone willing to pay. We manually find and 
+              remove your information. No scripts. No automation. Just real people doing the work.
             </p>
             <div className="hero-actions">
               <button 
                 className="btn btn-primary"
-                data-paperform-id="xmr0dk0c"
-                data-popup-button="1"
+                onClick={() => scrollToSection('contact')}
               >
-                Get Started
+                Talk To Us First
               </button>
               <button 
                 className="btn btn-secondary"
-                onClick={() => scrollToSection('process')}
+                onClick={() => scrollToSection('about')}
               >
-                How It Works
+                Learn More
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Exposure Check Tool */}
-      <section className="exposure-check">
+      {/* Plain English Explainer */}
+      <section className="explainer">
         <div className="container">
-          <div className="exposure-check-inner">
-            <div className="exposure-check-content">
-              <h3>Check Your Data Exposure</h3>
-              <p>Find out if your personal information is being traded online.</p>
-            </div>
-            <form className="exposure-check-form" onSubmit={checkExposure}>
-              <div className="exposure-input-wrap">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  value={exposureEmail}
-                  onChange={(e) => setExposureEmail(e.target.value)}
-                  required
-                />
-                <button type="submit" className="btn btn-primary" disabled={exposureLoading}>
-                  {exposureLoading ? 'Checking...' : 'Check Now'}
-                </button>
+          <div className="explainer-content">
+            <h2>Here is the situation, straight up</h2>
+            <div className="explainer-grid">
+              <div className="explainer-item">
+                <h3>What is happening with your data</h3>
+                <p>
+                  Data brokers collect your personal information from public records, social media, 
+                  online purchases, and dozens of other sources. They package it up and sell it to 
+                  anyone - marketers, scammers, stalkers, whoever pays. Most Australians have no idea this is happening.
+                </p>
               </div>
-              {exposureResult && (
-                <div className="exposure-result">
-                  <AlertIcon />
-                  <div>
-                    <p>{exposureResult.message}</p>
-                    <button 
-                      type="button"
-                      className="exposure-cta-link"
-                      onClick={() => scrollToSection('contact')}
-                    >
-                      {exposureResult.action}
-                    </button>
-                  </div>
-                </div>
-              )}
-            </form>
+              <div className="explainer-item">
+                <h3>What you can do yourself</h3>
+                <p>
+                  You can request removal from these sites yourself - it is your legal right. 
+                  The problem is there are hundreds of sites, each with different processes, and 
+                  many will re-list you within months. It is time-consuming and frustrating work.
+                </p>
+              </div>
+              <div className="explainer-item">
+                <h3>What we do</h3>
+                <p>
+                  We do the legwork for you. We manually search for your data across broker sites, 
+                  submit removal requests, follow up until it is gone, and monitor for re-listings. 
+                  You get a report showing exactly what we found and what we removed.
+                </p>
+              </div>
+              <div className="explainer-item">
+                <h3>Honest advice</h3>
+                <p>
+                  If you call us, we will tell you straight whether our service makes sense for your 
+                  situation. Sometimes it does, sometimes it does not. We would rather give you honest 
+                  advice than take your money for something you do not need.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -436,8 +453,21 @@ const App = () => {
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Australian Data Removal. All rights reserved.</p>
-            <p>ABN: XX XXX XXX XXX</p>
+            <div className="footer-bottom-left">
+              <p>&copy; {new Date().getFullYear()} Australian Data Removal. All rights reserved.</p>
+              <p>ABN: XX XXX XXX XXX</p>
+            </div>
+            <div className="footer-bottom-right">
+              <button 
+                className="clear-visit-btn"
+                onClick={clearVisit}
+                title="Clear all cookies and session data from this visit"
+              >
+                <TrashIcon />
+                {visitCleared ? 'Visit Cleared' : 'Clear My Visit'}
+              </button>
+              <p className="clear-visit-note">We practice what we preach</p>
+            </div>
           </div>
         </div>
       </footer>
@@ -489,6 +519,13 @@ const ClockIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="10"/>
     <polyline points="12 6 12 12 16 14"/>
+  </svg>
+);
+
+const TrashIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="3 6 5 6 21 6"/>
+    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
   </svg>
 );
 
