@@ -4,44 +4,44 @@ const Arsenal = () => {
     const products = [
         {
             id: 1,
-            name: 'ADR Core Patch',
-            for: 'High-stakes professionals & executives',
-            price: 'AUD $1950.00',
-            desc: 'The gold standard for complete digital eradication and sovereignty.',
-            slug: 'hve0sbqo',
+            name: 'Personal Data Exposure Audit',
+            for: 'Individuals wanting a digital risk assessment',
+            price: 'AUD $199.00',
+            desc: 'A structured manual investigation of where your personal information appears online. We search name, phone, email, and usernames across data brokers.',
+            stripeLink: 'https://buy.stripe.com/test_dR63ee9W54Yk7Is7ss', // PLACEHOLDER $199
             specs: [
-                'Global metadata & footprint purge',
-                'ADR-P1 Certification & Digital Deed',
-                'Priority Watchdog Monitoring (30 days)',
-                'Zero-knowledge compliance audit'
+                'Manual investigation of data brokers',
+                'Comprehensive Digital Risk Summary',
+                'Recommended next steps for removal',
+                'Delivered within 48 hours'
             ]
         },
         {
             id: 2,
-            name: 'Protocol Alpha',
-            for: 'Small teams & secure labs',
-            price: 'AUD $350.00',
-            desc: 'Encrypted communication utility for secure node coordination.',
-            slug: 'protocol-alpha',
+            name: 'Full Digital Clean-Up',
+            for: 'Complete manual data eradication',
+            price: 'AUD $997.00',
+            desc: 'Manual removal of the exposures identified in your audit. Includes removal and opt-out submissions, and documentation of results.',
+            stripeLink: 'https://buy.stripe.com/test_dR63ee9W54Yk7Is7ss', // PLACEHOLDER $997
             specs: [
-                'P2P encrypted routing protocol',
-                'Lifetime node access license',
-                'Zinc-alloy physical auth token',
-                'Team-wide secure handshake logic'
+                'Up to 15 manual removal submissions',
+                'One follow-up round for persistence',
+                'Full documentation of removal results',
+                'Direct human oversight throughout'
             ]
         },
         {
             id: 3,
-            name: 'Sentinel Badge',
-            for: 'Individual operators',
-            price: 'AUD $95.00',
-            desc: 'Physical proof of digital sovereignty and ADR-P1 status.',
-            slug: 'sentinel-badge',
+            name: 'First 500 Founding Members',
+            for: 'Limited to 500 spots',
+            price: 'AUD $500.00',
+            desc: 'Includes the Personal Data Exposure Audit, priority access to clean-up work, and lightweight ongoing exposure checks.',
+            stripeLink: 'https://buy.stripe.com/test_dR63ee9W54Yk7Is7ss', // PLACEHOLDER $500
             specs: [
-                'NFC-enabled secure verification',
-                'Matte black aerospace-grade finish',
-                'Unique serial ID (ADR-P1-001)',
-                'Sovereign Tank operative status'
+                'Lifetime founding member status',
+                'Personal Data Exposure Audit included',
+                'Priority clean-up scheduling',
+                'Periodic lightweight exposure checks'
             ]
         },
     ];
@@ -70,14 +70,13 @@ const Arsenal = () => {
                         </ul>
                     </div>
 
-                    <button
+                    <a
+                        href={product.stripeLink}
                         className="acquire-btn"
-                        style={{ width: '100%', marginTop: 'auto' }}
-                        data-paperform-id={product.slug}
-                        data-popup-button="1"
+                        style={{ width: '100%', marginTop: 'auto', textDecoration: 'none', display: 'block', textAlign: 'center' }}
                     >
-                        Acquire [GST Inc.]
-                    </button>
+                        {product.id === 1 ? 'Start My Exposure Audit' : product.id === 2 ? 'Remove My Data' : 'Join the First 500'}
+                    </a>
                 </div>
             ))}
         </div>

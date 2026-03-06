@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import OperationsTicker from './components/OperationsTicker';
-import Aria from './components/Aria';
 import Arsenal from './components/Arsenal';
 import DeedModal from './components/DeedModal';
 import TrustSection from './components/TrustSection';
@@ -17,7 +16,7 @@ const App = () => {
       window.dispatchEvent(customEvent);
     };
 
-    // Check for success URL parameter (Fallback for popups)
+    // Check for success URL parameter
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('success') === 'true') {
       triggerSuccess();
@@ -30,7 +29,6 @@ const App = () => {
     script.async = true;
     document.body.appendChild(script);
 
-    // Robust Message Listener
     const handleMessage = (event) => {
       try {
         const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
@@ -69,31 +67,26 @@ const App = () => {
     <div className="app-container">
       {/* System Banner */}
       <div className="system-banner">
-        <span><span style={{ color: 'var(--accent-gold)', marginRight: '0.5rem' }}>[SECURE]</span> SOVEREIGN TANK LAB TERMINAL</span>
-        <span>PATCH_ID: <span style={{ color: 'var(--text-main)' }}>ADR-P1-001</span></span>
+        <span><span style={{ color: 'var(--accent-gold)', marginRight: '0.5rem' }}>[SECURE]</span> AUS DATA REMOVAL | CLIENT TERMINAL</span>
+        <span>AUDIT_STATUS: <span style={{ color: 'var(--text-main)' }}>READY</span></span>
       </div>
 
       <main className="container">
-        {/* Structured Hero for immediate value proposition */}
+        {/* Simple & Clear Hero */}
         <section className="section reveal" id="hero">
           <div className="hero-content">
-            <h1 className="hero-title">Eradicate Your Digital Footprint.</h1>
+            <h1 className="hero-title">Your Personal Data Is Already Out There.</h1>
             <p className="hero-subtitle">
-              Sovereign Tank provides industrial-grade data removal and digital autonomy audits for high-stakes professionals. Secure your sovereignty today.
+              We find it, document it, and help you remove it. Manually. By a real person.
             </p>
             <div className="hero-actions">
-              <button
-                className="primary"
-                data-paperform-id="hve0sbqo"
-                data-popup-button="1"
-                onClick={() => {
-                  setIsLoading(true);
-                  // Ensure loading clears even if popup blocks interaction
-                  setTimeout(() => setIsLoading(false), 3000);
-                }}
+              <a
+                href="https://buy.stripe.com/test_dR63ee9W54Yk7Is7ss"
+                className="primary-btn"
+                onClick={() => setIsLoading(true)}
               >
-                Acquire Sovereignty Protocol
-              </button>
+                Start My Exposure Audit →
+              </a>
             </div>
           </div>
 
@@ -103,22 +96,37 @@ const App = () => {
         {/* Trust Signals */}
         <TrustSection />
 
-        {/* The Laboratory */}
-        <section className="section reveal" id="the-lab">
-          <h2>The Laboratory</h2>
-          <div className="glass-panel lab-panel">
-            <p className="lab-status">
-              System processing environmental parameters. Connect with operator for manual override.
-            </p>
-            <Aria />
+        {/* How It Works Section */}
+        <section className="section reveal" id="how-it-works">
+          <div className="section-header">
+            <h2>How It Works</h2>
+            <p className="section-subtitle">A transparent, manual process for absolute data sovereignty.</p>
+          </div>
+          <div className="process-grid">
+            <div className="process-step">
+              <div className="step-num">01</div>
+              <p>Book your Personal Data Exposure Audit and pay securely online.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-num">02</div>
+              <p>Complete a short intake form.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-num">03</div>
+              <p>We investigate manually and deliver your Digital Risk Summary within 48 hours.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-num">04</div>
+              <p>You can act on the findings yourself or engage us to perform the Full Digital Clean-Up.</p>
+            </div>
           </div>
         </section>
 
         {/* The Arsenal: Product Tiers */}
         <section className="section reveal" id="the-arsenal">
-          <h2>The Arsenal</h2>
+          <h2>Services</h2>
           <p className="section-intro">
-            Select your tier of digital autonomy. Each patch is ADR-certified and precision-engineered.
+            Professional data removal audits and manual eradication protocols.
           </p>
           <Arsenal />
         </section>
@@ -127,7 +135,7 @@ const App = () => {
       <footer className="system-footer">
         <div className="container footer-content-grid">
           <div className="footer-brand-section">
-            <div className="footer-logo">SOVEREIGN TANK</div>
+            <div className="footer-logo">AUS DATA REMOVAL</div>
             <div className="footer-copyright">
               &copy; {new Date().getFullYear()} OPERATIONS. ALL RIGHTS RESERVED.
             </div>
@@ -188,13 +196,13 @@ const App = () => {
                 <>
                   <p>1. DATA COLLECTION: We operate on a zero-knowledge basis. Local parameters are used solely for the eradication process.</p>
                   <p>2. ENCRYPTION: All transition data is encrypted via 256-bit AES industrial standards.</p>
-                  <p>3. RETENTION: Sovereign Tank retains zero user data post-audit. All session logs are purged upon completion of The Deed.</p>
+                  <p>3. RETENTION: AUS Data Removal retains zero user data post-audit. All session logs are purged upon completion.</p>
                 </>
               ) : (
                 <>
-                  <p>1. SERVICE: Sovereign Tank provides data removal audits as validated by the ADR-P1 certificate.</p>
+                  <p>1. SERVICE: AUS Data Removal provides data removal audits as validated by the ADR-P1 certificate.</p>
                   <p>2. LIABILITY: We provide industrial-grade audits but the user remains the ultimate sovereign of their digital identity.</p>
-                  <p>3. REFUNDS: Due to the immediate nature of data eradication protocols, all sales are final upon issuance of the Deed.</p>
+                  <p>3. REFUNDS: Due to the immediate nature of data eradication protocols, all sales are final upon issuance of the Report.</p>
                 </>
               )}
             </div>
