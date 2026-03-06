@@ -70,13 +70,17 @@ const Arsenal = () => {
                         </ul>
                     </div>
 
-                    <a
-                        href={product.stripeLink}
+                    <button
                         className="acquire-btn"
-                        style={{ width: '100%', marginTop: 'auto', textDecoration: 'none', display: 'block', textAlign: 'center' }}
+                        style={{ width: '100%', marginTop: 'auto' }}
+                        data-paperform-id={product.id === 1 ? "t86h5x0u" : product.id === 2 ? "aus-clean-up" : "first-500-founding-members"}
+                        data-popup-button="1"
+                        onClick={() => {
+                            // Handle loading if needed
+                        }}
                     >
                         {product.id === 1 ? 'Start My Exposure Audit' : product.id === 2 ? 'Remove My Data' : 'Join the First 500'}
-                    </a>
+                    </button>
                 </div>
             ))}
         </div>

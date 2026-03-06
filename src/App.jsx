@@ -80,13 +80,17 @@ const App = () => {
               We find it, document it, and help you remove it. Manually. By a real person.
             </p>
             <div className="hero-actions">
-              <a
-                href="https://buy.stripe.com/test_dR63ee9W54Yk7Is7ss"
-                className="primary-btn"
-                onClick={() => setIsLoading(true)}
+              <button
+                className="primary"
+                data-paperform-id="t86h5x0u"
+                data-popup-button="1"
+                onClick={() => {
+                  setIsLoading(true);
+                  setTimeout(() => setIsLoading(false), 3000);
+                }}
               >
                 Start My Exposure Audit →
-              </a>
+              </button>
             </div>
           </div>
 
