@@ -8,7 +8,7 @@ const Arsenal = () => {
             for: 'Individuals wanting a digital risk assessment',
             price: 'AUD $199.00',
             desc: 'A structured manual investigation of where your personal information appears online. We search name, phone, email, and usernames across data brokers.',
-            stripeLink: 'https://buy.stripe.com/test_dR63ee9W54Yk7Is7ss', // PLACEHOLDER $199
+            stripeLink: 'https://buy.stripe.com/14AdRa2Cl6LT3TB0R3fbq06', // $199 Audit - LIVE
             specs: [
                 'Manual investigation of data brokers',
                 'Comprehensive Digital Risk Summary',
@@ -70,17 +70,15 @@ const Arsenal = () => {
                         </ul>
                     </div>
 
-                    <button
+                    <a
+                        href={product.stripeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="acquire-btn"
-                        style={{ width: '100%', marginTop: 'auto' }}
-                        data-paperform-id={product.id === 1 ? "t86h5x0u" : product.id === 2 ? "aus-clean-up" : "first-500-founding-members"}
-                        data-popup-button="1"
-                        onClick={() => {
-                            // Handle loading if needed
-                        }}
+                        style={{ width: '100%', marginTop: 'auto', display: 'block', textAlign: 'center', textDecoration: 'none' }}
                     >
                         {product.id === 1 ? 'Start My Exposure Audit' : product.id === 2 ? 'Remove My Data' : 'Join the First 500'}
-                    </button>
+                    </a>
                 </div>
             ))}
         </div>
