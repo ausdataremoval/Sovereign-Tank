@@ -574,3 +574,51 @@ button.primary:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Start Page */
+.start-page {
+  min-height: 100vh;
+  padding: var(--space-xl) var(--space-sm);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.start-container {
+  max-width: 900px;
+  width: 100%;
+  background: var(--bg-panel);
+  padding: var(--space-lg);
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+}
+
+.start-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.start-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  line-height: 1.7;
+}
+
+.form-wrapper {
+  margin-top: var(--space-sm);
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .start-container {
+    padding: var(--space-md);
+  }
+
+  .start-container h1 {
+    font-size: 1.6rem;
+  }
+}
