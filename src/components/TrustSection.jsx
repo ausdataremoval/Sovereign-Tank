@@ -1,42 +1,38 @@
 import React from 'react';
 
 const TrustSection = () => {
-    const signals = [
-        {
-            icon: '🛡️',
-            title: 'ADR-Certified',
-            desc: 'All data removal protocols are certified by the Autonomous Data Registry (ADR-P1).'
-        },
-        {
-            icon: '🔒',
-            title: 'Zero-Knowledge',
-            desc: 'We never see your raw data. Our audits are performed using zero-knowledge proof cryptography.'
-        },
-        {
-            icon: '⚡',
-            title: 'Permanent Purge',
-            desc: 'Once eradicated, data is non-recoverable via standard forensic tools. Guaranteed.'
-        }
-    ];
+  const signals = [
+    {
+      title: 'Manual Audit',
+      desc: 'Each case is reviewed by a real operator using structured search and documentation methods.'
+    },
+    {
+      title: 'Documented Findings',
+      desc: 'You receive a Digital Risk Summary showing where your personal information appears and what can be done next.'
+    },
+    {
+      title: 'Australian-Led Process',
+      desc: 'Australian-led service with human handling, direct communication, and structured removal workflows.'
+    }
+  ];
 
-    return (
-        <section className="section trust-section">
-            <div className="trust-grid">
-                {signals.map((signal, index) => (
-                    <div key={index} className="trust-card glass-panel">
-                        <div className="trust-icon">{signal.icon}</div>
-                        <h4 className="trust-title">{signal.title}</h4>
-                        <p className="trust-desc">{signal.desc}</p>
-                    </div>
-                ))}
+  return (
+    <section className="trust-section">
+      <div className="container">
+        <div className="trust-grid">
+          {signals.map((signal, index) => (
+            <div key={index} className="trust-card">
+              <h4>{signal.title}</h4>
+              <p>{signal.desc}</p>
             </div>
-            <div className="security-guarantee">
-                <p>
-                    <span className="guarantee-badge">GUARANTEE</span> Our service is backed by a 100% data-sovereignty assurance. If a footprint remains, we re-run the protocol at zero cost.
-                </p>
-            </div>
-        </section>
-    );
+          ))}
+        </div>
+        <div className="trust-strip">
+          Secure payment, manual case handling, documented removal workflows, and direct follow-up where required.
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default TrustSection;

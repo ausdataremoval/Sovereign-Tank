@@ -1,43 +1,24 @@
 import React from 'react';
 
-const DeedModal = ({ onClose, submissionId = "ST-9982-X" }) => {
-    return (
-        <div className="modal-overlay">
-            <div className="deed-container">
-                <button className="close-modal" onClick={onClose}>&times;</button>
-
-                <div className="deed-seal">SEAL</div>
-
-                <div className="deed-header">
-                    <h1>DEED OF DIGITAL SOVEREIGNTY</h1>
-                    <div className="deed-meta">
-                        <span>SERIAL #{submissionId}</span>
-                        <span>PATCH ID: ADR-P1-001</span>
-                    </div>
-                </div>
-
-                <div className="deed-body">
-                    {`This document serves as formal certification of successful Data Eradication.
-
-Under the protocols of Sovereign Tank, all identified digital traces, metadata fragments, and third-party tracking vectors associated with the signatory have been purged from host environments.
-
-VERIFICATION PROTOCOL:
-- Status: PURGED
-- Encryption: 256-bit AES
-- Recovery Potential: 0.00%
-- Watchdog Status: SECURE
-
-By the power of distributed verification, you are hereby granted complete digital autonomy over the identified nodes.`}
-                </div>
-
-                <div className="deed-footer">
-                    <div>DATE: {new Date().toLocaleDateString()}</div>
-                    <div>ST-LABS VERIFIED</div>
-                    <div>AUTHORIZED BY ARIA</div>
-                </div>
-            </div>
-        </div>
-    );
+const DeedModal = ({ onClose }) => {
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <button className="close-modal" onClick={onClose}>&times;</button>
+        <h2>Thank You</h2>
+        <p>Your submission has been received successfully.</p>
+        <p>We will begin your Digital Exposure Audit and deliver your Digital Risk Summary within 48 hours.</p>
+        <p>If you have any questions, please contact us at <a href="mailto:hello@ausdataremoval.com.au">hello@ausdataremoval.com.au</a>.</p>
+        <button 
+          className="primary" 
+          onClick={onClose}
+          style={{ marginTop: '1.5rem', width: '100%' }}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default DeedModal;
