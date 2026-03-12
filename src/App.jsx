@@ -69,7 +69,10 @@ const App = () => {
               <p className="hero-label">Australian Data Removal</p>
               <h1 className="hero-title">Your Personal Data Is Already Out There.</h1>
               <p className="hero-subtitle">
-                We find it, document it, and help you remove it. Manually. By a real person.
+                We find it, document it, and help you remove it — manually, by a real person.
+              </p>
+              <p className="hero-desc">
+                Australian Data Removal provides structured digital exposure audits and human-led removal services for individuals, families, and professionals concerned about their online privacy.
               </p>
               <div className="hero-actions">
                 <a href="/start" className="cta-link primary">
@@ -77,18 +80,23 @@ const App = () => {
                 </a>
               </div>
               <p className="hero-note">
-                Secure checkout. Manual handling. Digital Risk Summary typically delivered within 48 business hours.
+                Secure checkout. Human-reviewed service. Digital Risk Summary typically delivered within 48 hours.
               </p>
             </div>
             <div className="hero-aside">
               <div className="research-panel">
                 <p className="panel-label">Privacy Research & Collaboration</p>
+                <p className="panel-intro">Australian Data Removal supports responsible data practices through research and collaboration.</p>
                 <ul className="research-list">
                   <li>Policy partnerships with Australian privacy advocates</li>
                   <li>Academic collaboration on data broker behaviour</li>
-                  <li>Data breach research and public awareness</li>
+                  <li>Data breach research and public awareness initiatives</li>
                 </ul>
-                <p className="panel-note">We contribute findings to help shape better privacy outcomes for all Australians.</p>
+                <p className="panel-note">A portion of annual net profits is allocated to privacy research, education, and initiatives that improve digital privacy outcomes.</p>
+                <div className="panel-contact">
+                  <p className="panel-contact-label">Research & Partnerships</p>
+                  <a href="mailto:research@ausdataremoval.com.au">research@ausdataremoval.com.au</a>
+                </div>
               </div>
             </div>
           </div>
@@ -108,22 +116,22 @@ const App = () => {
             <div className="process-step">
               <div className="step-num">01</div>
               <h3>Book Your Audit</h3>
-              <p>Book your Personal Data Exposure Audit and pay securely online.</p>
+              <p>Book your Personal Data Exposure Audit and complete secure payment online.</p>
             </div>
             <div className="process-step">
               <div className="step-num">02</div>
               <h3>Complete Intake</h3>
-              <p>Complete a short intake form with the details we need to investigate.</p>
+              <p>Complete a short intake form with the information required for investigation.</p>
             </div>
             <div className="process-step">
               <div className="step-num">03</div>
               <h3>Receive Your Report</h3>
-              <p>We investigate manually and typically deliver your Digital Risk Summary within 48 business hours.</p>
+              <p>We conduct a manual investigation and typically deliver your Digital Risk Summary within 48 business hours.</p>
             </div>
             <div className="process-step">
               <div className="step-num">04</div>
               <h3>Take Action</h3>
-              <p>Act on the findings yourself or engage us to perform the Full Digital Clean-Up.</p>
+              <p>Act on the findings yourself or engage us to perform the full Digital Clean-Up service.</p>
             </div>
           </div>
         </section>
@@ -133,7 +141,7 @@ const App = () => {
           <p className="section-label">Services</p>
           <h2>Choose Your Service</h2>
           <p className="section-intro">
-            Professional data exposure audits and manual removal services.
+            Professional digital exposure audits and manual removal services.
           </p>
           <Arsenal />
         </section>
@@ -143,14 +151,11 @@ const App = () => {
           <p className="section-label">Our Approach</p>
           <h2>How We Use Technology</h2>
           <div className="technology-content">
-            <p>Australian Data Removal combines careful human investigation with modern tools to locate and remove personal data from the internet.</p>
-            <p>Technology helps us scan large volumes of public information quickly, identify potential exposures, and organise removal requests. Automated tools alone cannot reliably assess context, legality, or the real-world impact of online information.</p>
-            <p>Every case we handle involves human review. Our analysts verify whether the information actually relates to you and determine the appropriate removal approach.</p>
-            <p>We do not rely on "magic button" solutions that promise instant results. The internet does not work that way.</p>
-            <p>Instead, our process is transparent. You receive a clear record of what was found, what actions were taken, and what information cannot be removed at this time.</p>
-            <blockquote className="technology-quote">
-              We don't do scare tactics, and we don't sell magic buttons. You always know what we found, what we removed, and what can't be removed yet — in plain English.
-            </blockquote>
+            <p>Australian Data Removal uses technology to support careful human investigation — not to replace it.</p>
+            <p>Modern tools help us scan large volumes of publicly available information, organise findings, and track removal requests. They do not make decisions or act on your behalf without a specialist reviewing the case.</p>
+            <p>Every engagement involves manual review. We confirm whether information actually relates to you, assess the potential real-world risk, and determine the appropriate removal approach for each platform.</p>
+            <p>We do not offer "magic button" privacy or bulk automation services. The internet does not work that way.</p>
+            <p>Instead, our process focuses on clarity and transparency. You receive a clear record of what was found, what removal requests were made, and which items cannot currently be removed — explained in plain English.</p>
           </div>
         </section>
 
@@ -179,21 +184,21 @@ const App = () => {
           </div>
         </section>
 
-        {/* Values Section */}
+        {/* Service Principles */}
         <section className="values-section">
           <div className="container">
             <div className="values-grid">
               <div className="values-item">
                 <h4>Local Oversight</h4>
-                <p>All investigations are conducted from our Perth office. No offshore processing.</p>
+                <p>All investigations are conducted from our Perth office.</p>
               </div>
               <div className="values-item">
                 <h4>Manual Verification</h4>
-                <p>Every data broker listing is cross-referenced by a person to ensure it actually belongs to you.</p>
+                <p>Data broker listings are reviewed by a person to confirm they actually belong to you.</p>
               </div>
               <div className="values-item">
                 <h4>No Data Reselling</h4>
-                <p>We are the anti-broker. Your intake data is used solely for removal purposes and never shared or sold.</p>
+                <p>Your intake information is used only for the purposes of investigation and removal requests. It is never sold or shared.</p>
               </div>
             </div>
           </div>
@@ -221,11 +226,11 @@ const App = () => {
               <h5>CONTACT</h5>
               <p><a href="mailto:hello@ausdataremoval.com.au">hello@ausdataremoval.com.au</a></p>
               <p><a href="tel:1300504079">1300 504 079</a></p>
+              <p><a href="mailto:research@ausdataremoval.com.au">research@ausdataremoval.com.au</a></p>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Australian Data Removal Pty Ltd (ACN 695 272 836). All rights reserved.</p>
-            <p>Australian-owned and operated. Manual case handling. Best-efforts data removal advocacy.</p>
+            <p>&copy; {new Date().getFullYear()} Australian Data Removal</p>
           </div>
         </div>
       </footer>

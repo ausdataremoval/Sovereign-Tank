@@ -6,14 +6,15 @@ const Arsenal = () => {
       id: 1,
       name: 'Personal Data Exposure Audit',
       price: 'AUD $200',
-      desc: 'A manual, investigator-led review to identify where your personal information is visible across major data brokers and public directories.',
+      desc: 'A structured manual investigation identifying where your personal information appears across data brokers, listing sites, and public directories.',
       specs: [
-        'Specialist investigation of broker exposure',
-        'Digital Risk Summary & findings',
-        'Strategic advice for manual removal',
+        'Manual investigation of data broker exposure',
+        'Digital Risk Summary',
+        'Identification of public listing exposures',
+        'Recommended next steps',
         'Typically delivered within 48 business hours'
       ],
-      buttonText: 'Start My Data Exposure Audit',
+      buttonText: 'Start My Exposure Audit',
       href: '/checkout/audit',
       recommended: false
     },
@@ -21,13 +22,13 @@ const Arsenal = () => {
       id: 2,
       name: 'Founding Member Privacy Package',
       price: 'AUD $700',
-      desc: 'An exclusive early-adopter package combining our full audit suite with priority removal advocacy and human-led privacy support.',
+      desc: 'An early-supporter package combining a full exposure audit, expanded investigation, and priority handling.',
       specs: [
-        'Priority Digital Exposure Audit',
-        'Comprehensive removal advocacy',
-        'Direct specialist consultation',
-        'Founding Member certificate',
-        'Limited early supporter offer'
+        'Full digital exposure audit',
+        'Expanded investigation of data listings',
+        'Priority case handling',
+        'Founding Member certificate recognising early support',
+        'Limited early supporter availability'
       ],
       buttonText: 'Join as a Founding Member',
       href: '/checkout/founding-member',
@@ -37,12 +38,12 @@ const Arsenal = () => {
       id: 3,
       name: 'Digital Clean-Up Advocacy',
       price: 'AUD $1,000',
-      desc: 'Human-led removal requests and opt-out submissions for identified exposures, including direct follow-up and progress documentation.',
+      desc: 'Human-led removal requests and opt-out submissions for identified exposures, with documentation and oversight throughout the process.',
       specs: [
-        'Professional removal request management',
-        'Up to 15 targeted removal submissions',
-        'Post-request follow-up for persistent listings',
-        'Final status report & documentation'
+        'Manual removal submissions to data brokers and listing sites',
+        'Opt-out and correction requests',
+        'One follow-up round where required',
+        'Documentation of removal actions'
       ],
       buttonText: 'Request Data Removal',
       href: '/checkout/cleanup',
