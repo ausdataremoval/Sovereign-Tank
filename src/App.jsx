@@ -178,6 +178,26 @@ const App = () => {
             <div className="receive-item">Human follow-up where required</div>
           </div>
         </section>
+
+        {/* Values Section */}
+        <section className="values-section">
+          <div className="container">
+            <div className="values-grid">
+              <div className="values-item">
+                <h4>Local Oversight</h4>
+                <p>All investigations are conducted from our Perth office. No offshore processing.</p>
+              </div>
+              <div className="values-item">
+                <h4>Manual Verification</h4>
+                <p>Every data broker listing is cross-referenced by a person to ensure it actually belongs to you.</p>
+              </div>
+              <div className="values-item">
+                <h4>No Data Reselling</h4>
+                <p>We are the anti-broker. Your intake data is used solely for removal purposes and never shared or sold.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
