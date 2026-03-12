@@ -10,6 +10,11 @@ import CheckoutFoundingMember from './components/CheckoutFoundingMember.jsx'
 import CheckoutCleanup from './components/CheckoutCleanup.jsx'
 import CheckoutDIY from './components/CheckoutDIY.jsx'
 import DIYDownload from './components/DIYDownload.jsx'
+import Resources from './components/Resources.jsx'
+import Members from './components/Members.jsx'
+import Support from './components/Support.jsx'
+import ExposureRadar from './components/ExposureRadar.jsx'
+import Checklist from './components/Checklist.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,6 +28,11 @@ createRoot(document.getElementById('root')).render(
         <Route path="/checkout/cleanup" element={<CheckoutCleanup />} />
         <Route path="/checkout/diy-roadmap" element={<CheckoutDIY />} />
         <Route path="/diy-download" element={<DIYDownload />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/members" element={<Members />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/exposure-radar" element={<ExposureRadar />} />
+        <Route path="/checklist" element={<Checklist />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
