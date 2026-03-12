@@ -824,6 +824,42 @@ button.primary:hover {
   color: var(--bg-primary);
 }
 
+/* Founding Member Seal Button */
+.seal-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.seal-btn {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+}
+
+.seal-btn-wrapper:hover .seal-btn {
+  transform: scale(1.03);
+}
+
+.seal-caption {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  transition: color var(--transition-normal);
+}
+
+.seal-btn-wrapper:hover .seal-caption {
+  color: var(--accent-gold);
+}
+
 /* AI and Your Privacy */
 .ai-privacy-content {
   max-width: 680px;

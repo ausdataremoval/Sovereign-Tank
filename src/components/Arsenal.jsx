@@ -73,12 +73,23 @@ const Arsenal = () => {
                 </ul>
               </div>
             )}
-            <a
-              href={product.href}
-              className="acquire-btn"
-            >
-              {product.buttonText}
-            </a>
+            {product.id === 2 ? (
+              <a href={product.href} className="seal-btn-wrapper">
+                <img 
+                  src="/images/founding-member-seal.png" 
+                  alt="ADR Founding Member 2026 Seal" 
+                  className="seal-btn"
+                />
+                <span className="seal-caption">Become a Founding Member</span>
+              </a>
+            ) : (
+              <a
+                href={product.href}
+                className="acquire-btn"
+              >
+                {product.buttonText}
+              </a>
+            )}
           </div>
         ))}
       </div>
