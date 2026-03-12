@@ -15,6 +15,10 @@ import Members from './components/Members.jsx'
 import Support from './components/Support.jsx'
 import ExposureRadar from './components/ExposureRadar.jsx'
 import Checklist from './components/Checklist.jsx'
+import OperatingPrinciples from './components/OperatingPrinciples.jsx'
+import PrivacyPolicy from './components/PrivacyPolicy.jsx'
+import Terms from './components/Terms.jsx'
+import Disclaimer from './components/Disclaimer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -33,6 +37,10 @@ createRoot(document.getElementById('root')).render(
         <Route path="/support" element={<Support />} />
         <Route path="/exposure-radar" element={<ExposureRadar />} />
         <Route path="/checklist" element={<Checklist />} />
+        <Route path="/operating-principles" element={<OperatingPrinciples />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

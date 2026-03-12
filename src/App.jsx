@@ -7,6 +7,14 @@ const App = () => {
   const [showDeed, setShowDeed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [legalContent, setLegalContent] = useState(null);
+  const [showCookieNotice, setShowCookieNotice] = useState(() => {
+    return !localStorage.getItem('adr_cookie_acknowledged');
+  });
+
+  const acknowledgeCookieNotice = () => {
+    localStorage.setItem('adr_cookie_acknowledged', 'true');
+    setShowCookieNotice(false);
+  };
 
   useEffect(() => {
     const triggerSuccess = () => {
@@ -175,12 +183,14 @@ const App = () => {
               <a href="/checklist">Digital Footprint Checklist</a>
               <a href="/exposure-radar">Exposure Radar</a>
               <a href="/support">Support Privacy Research</a>
+              <a href="/members">Founding Members</a>
             </div>
             <div className="footer-links">
-              <h5>COMPANY</h5>
-              <a href="/members">Founding Members</a>
-              <button onClick={() => setLegalContent('privacy')}>Privacy Policy</button>
-              <button onClick={() => setLegalContent('terms')}>Terms of Service</button>
+              <h5>LEGAL</h5>
+              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/terms">Terms of Service</a>
+              <a href="/disclaimer">Disclaimer</a>
+              <a href="/operating-principles">Operating Principles</a>
             </div>
             <div className="footer-contact">
               <h5>CONTACT</h5>
@@ -321,6 +331,19 @@ const App = () => {
       )}
 
       {showDeed && <DeedModal onClose={() => setShowDeed(false)} />}
+
+      {/* Cookie/Analytics Notice */}
+      {showCookieNotice && (
+        <div className="cookie-notice">
+          <p>
+            This website may use basic analytics to understand visitor activity. 
+            We do not use tracking cookies for advertising or sell your data.
+          </p>
+          <button onClick={acknowledgeCookieNotice} className="cookie-btn">
+            Understood
+          </button>
+        </div>
+      )}
     </div>
   )
 }
