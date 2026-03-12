@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Arsenal from './components/Arsenal';
 import DeedModal from './components/DeedModal';
 import TrustSection from './components/TrustSection';
-import FounderCard from './components/FounderCard';
 
 const App = () => {
   const [showDeed, setShowDeed] = useState(false);
@@ -67,6 +66,7 @@ const App = () => {
         <section className="section reveal" id="hero">
           <div className="hero-layout">
             <div className="hero-main">
+              <p className="hero-label">Australian Data Removal</p>
               <h1 className="hero-title">Your Personal Data Is Already Out There.</h1>
               <p className="hero-subtitle">
                 We find it, document it, and help you remove it. Manually. By a real person.
@@ -79,12 +79,17 @@ const App = () => {
               <p className="hero-note">
                 Secure checkout. Manual handling. Digital Risk Summary typically delivered within 48 business hours.
               </p>
-              <p className="hero-reassurance">
-                A specialist reviews every request and replies within 48 business hours. No AI decisions. No offshore call centres.
-              </p>
             </div>
             <div className="hero-aside">
-              <FounderCard />
+              <div className="research-panel">
+                <p className="panel-label">Privacy Research & Collaboration</p>
+                <ul className="research-list">
+                  <li>Policy partnerships with Australian privacy advocates</li>
+                  <li>Academic collaboration on data broker behaviour</li>
+                  <li>Data breach research and public awareness</li>
+                </ul>
+                <p className="panel-note">We contribute findings to help shape better privacy outcomes for all Australians.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -94,6 +99,7 @@ const App = () => {
 
         {/* How It Works */}
         <section className="section reveal container" id="how-it-works">
+          <p className="section-label">Process</p>
           <h2>How It Works</h2>
           <p className="section-intro">
             A transparent, manual process for understanding and controlling your digital exposure.
@@ -124,7 +130,8 @@ const App = () => {
 
         {/* Services */}
         <section className="section reveal container" id="services">
-          <h2>Services</h2>
+          <p className="section-label">Services</p>
+          <h2>Choose Your Service</h2>
           <p className="section-intro">
             Professional data exposure audits and manual removal services.
           </p>
@@ -133,6 +140,7 @@ const App = () => {
 
         {/* How We Use Technology */}
         <section className="section reveal container" id="technology">
+          <p className="section-label">Our Approach</p>
           <h2>How We Use Technology</h2>
           <div className="technology-content">
             <p>Australian Data Removal combines careful human investigation with modern tools to locate and remove personal data from the internet.</p>
@@ -148,6 +156,7 @@ const App = () => {
 
         {/* Who This Is For */}
         <section className="section reveal container" id="audience">
+          <p className="section-label">Clients</p>
           <h2>Who This Is For</h2>
           <div className="audience-grid">
             <div className="audience-item">Individuals wanting to understand their digital exposure</div>
@@ -159,6 +168,7 @@ const App = () => {
 
         {/* What You Receive */}
         <section className="section reveal container" id="receive">
+          <p className="section-label">Deliverables</p>
           <h2>What You Receive</h2>
           <div className="receive-list">
             <div className="receive-item">Digital Risk Summary</div>
