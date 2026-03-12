@@ -2,21 +2,21 @@
 
 :root {
   /* Colors - Premium Legal Services Theme */
-  --bg-primary: #0A0A0A;
-  --bg-secondary: #0F0F0F;
-  --bg-panel: #141414;
-  --bg-elevated: #1A1A1A;
-  --accent-gold: #C9A962;
-  --accent-gold-light: #D4B872;
-  --accent-gold-dim: rgba(201, 169, 98, 0.12);
-  --text-main: #F8F6F3;
-  --text-muted: #A8A49C;
-  --text-subtle: #6B6860;
-  --border-subtle: rgba(201, 169, 98, 0.08);
-  --border-gold: rgba(201, 169, 98, 0.2);
-  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.35);
-  --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.45), 0 4px 12px rgba(201, 169, 98, 0.03);
-  --shadow-glow: 0 0 30px rgba(201, 169, 98, 0.08);
+  --bg-primary: #08080A;
+  --bg-secondary: #0C0C0E;
+  --bg-panel: #111114;
+  --bg-elevated: #18181C;
+  --accent-gold: #B8986A;
+  --accent-gold-light: #CEAD7D;
+  --accent-gold-dim: rgba(184, 152, 106, 0.08);
+  --text-main: #EDEBE8;
+  --text-muted: #8E8A82;
+  --text-subtle: #5A574F;
+  --border-subtle: rgba(184, 152, 106, 0.06);
+  --border-gold: rgba(184, 152, 106, 0.15);
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 40px rgba(184, 152, 106, 0.06);
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
