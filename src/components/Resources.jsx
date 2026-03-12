@@ -7,68 +7,51 @@ const Resources = () => {
       title: 'Free Exposure Checks',
       desc: 'Check if your email or personal data has appeared in known breaches.',
       links: [
-        { name: 'Have I Been Pwned', url: 'https://haveibeenpwned.com/', desc: 'Check email addresses against known data breaches' },
-        { name: 'Mozilla Monitor', url: 'https://monitor.mozilla.org/', desc: 'Monitor your email for exposure in breaches' }
+        { name: 'Have I Been Pwned', url: 'https://haveibeenpwned.com', desc: 'Check email addresses against known data breaches' },
+        { name: 'Mozilla Monitor', url: 'https://monitor.mozilla.org', desc: 'Monitor your email for exposure in breaches' }
       ]
     },
     {
-      title: 'Scam & Fraud Verification',
+      title: 'Scam & Fraud Verification (AU)',
       desc: 'Verify suspicious contacts, websites, and communications.',
       links: [
-        { name: 'Scamwatch', url: 'https://www.scamwatch.gov.au/', desc: 'ACCC scam reporting and verification' },
-        { name: 'National Anti-Scam Centre', url: 'https://www.accc.gov.au/national-anti-scam-centre', desc: 'Australian Government anti-scam resources' }
+        { name: 'Scamwatch', url: 'https://www.scamwatch.gov.au', desc: 'ACCC scam reporting and verification' },
+        { name: 'National Anti-Scam Centre', url: 'https://www.cyber.gov.au/report-and-recover/recover-from/scams', desc: 'Australian Government anti-scam resources' }
       ]
     },
     {
-      title: 'Identity Protection Support',
+      title: 'Identity Protection & Support',
       desc: 'Get help if your identity has been compromised.',
       links: [
-        { name: 'IDCARE', url: 'https://www.idcare.org/', desc: 'Australia and New Zealand identity and cyber support service' },
-        { name: 'Services Australia', url: 'https://www.servicesaustralia.gov.au/identity-theft', desc: 'Government identity theft support' },
-        { name: 'ACSC', url: 'https://www.cyber.gov.au/', desc: 'Australian Cyber Security Centre' }
+        { name: 'IDCARE', url: 'https://www.idcare.org', desc: 'Australia and New Zealand identity and cyber support service' },
+        { name: 'Cyber.gov.au', url: 'https://www.cyber.gov.au', desc: 'Australian Cyber Security Centre' },
+        { name: 'Services Australia', url: 'https://www.servicesaustralia.gov.au/help-if-scam-or-identity-theft-has-affected-you', desc: 'Government identity theft support' }
       ]
     },
     {
       title: 'Tracking & Privacy Tests',
       desc: 'Test how trackable your browser and devices are.',
       links: [
-        { name: 'Cover Your Tracks', url: 'https://coveryourtracks.eff.org/', desc: 'EFF browser fingerprinting test' },
-        { name: 'Browser Leaks', url: 'https://browserleaks.com/', desc: 'Comprehensive browser privacy test' }
+        { name: 'Cover Your Tracks', url: 'https://coveryourtracks.eff.org', desc: 'EFF browser fingerprinting test' },
+        { name: 'Am I Unique', url: 'https://amiunique.org', desc: 'Browser fingerprint uniqueness test' }
       ]
     },
     {
-      title: 'Website Safety Tools',
-      desc: 'Check if websites or files are safe.',
+      title: 'Advanced OSINT & Footprint Tools',
+      desc: 'Professional-grade tools for understanding your digital footprint.',
       links: [
-        { name: 'VirusTotal', url: 'https://www.virustotal.com/', desc: 'Scan URLs and files for malware' },
-        { name: 'ICANN Lookup', url: 'https://lookup.icann.org/', desc: 'Domain registration information' }
+        { name: 'WhatsMyName', url: 'https://whatsmyname.app', desc: 'Username search across platforms' },
+        { name: 'Jimpl Metadata Viewer', url: 'https://jimpl.com', desc: 'View metadata in images' },
+        { name: 'Wayback Machine', url: 'https://archive.org/web', desc: 'View archived versions of websites' },
+        { name: 'Epieos', url: 'https://epieos.com', desc: 'Email and phone investigation' },
+        { name: 'Shodan', url: 'https://www.shodan.io', desc: 'Internet-connected device search engine' }
       ]
     },
     {
-      title: 'Public Footprint Search',
-      desc: 'Tools to help understand your public digital footprint.',
+      title: 'Support Privacy Research (Voluntary)',
+      desc: 'Organisations working to protect digital rights in Australia.',
       links: [
-        { name: 'WhatsMyName', url: 'https://whatsmyname.app/', desc: 'Username search across platforms' },
-        { name: 'Wayback Machine', url: 'https://web.archive.org/', desc: 'View archived versions of websites' },
-        { name: 'EXIF.tools', url: 'https://exif.tools/', desc: 'View metadata in images' }
-      ]
-    },
-    {
-      title: 'Advanced Investigation Tools',
-      desc: 'Professional-grade OSINT and research tools.',
-      links: [
-        { name: 'Shodan', url: 'https://www.shodan.io/', desc: 'Internet-connected device search engine' },
-        { name: 'Epieos', url: 'https://epieos.com/', desc: 'Email and phone investigation' },
-        { name: 'IntelTechniques', url: 'https://inteltechniques.com/tools/', desc: 'OSINT research tools' }
-      ]
-    },
-    {
-      title: 'Learning & Official Guidance',
-      desc: 'Educational resources and official government guidance.',
-      links: [
-        { name: 'ACSC Guidance', url: 'https://www.cyber.gov.au/learn', desc: 'Australian Cyber Security Centre learning resources' },
-        { name: 'Cyber Wardens', url: 'https://www.cyberwardens.com.au/', desc: 'Free cyber security training for small business' },
-        { name: 'eSafety Commissioner', url: 'https://www.esafety.gov.au/', desc: 'Online safety resources and reporting' }
+        { name: 'Electronic Frontiers Australia', url: 'https://www.efa.org.au', desc: 'Digital rights advocacy organisation' }
       ]
     }
   ];
@@ -123,6 +106,34 @@ const Resources = () => {
             </div>
           </section>
         ))}
+
+        <section className="resource-section resource-crypto-section">
+          <h2>Crypto Contributions</h2>
+          <p className="resource-section-desc">
+            Voluntary crypto contributions to support ongoing privacy research and advocacy.
+          </p>
+          <div className="crypto-addresses">
+            <div className="crypto-item">
+              <span className="crypto-label">BTC</span>
+              <span className="crypto-address">[Address to be added]</span>
+            </div>
+            <div className="crypto-item">
+              <span className="crypto-label">ETH</span>
+              <span className="crypto-address">[Address to be added]</span>
+            </div>
+            <div className="crypto-item">
+              <span className="crypto-label">USDT</span>
+              <span className="crypto-address">[Address to be added]</span>
+            </div>
+            <div className="crypto-item">
+              <span className="crypto-label">USDC</span>
+              <span className="crypto-address">[Address to be added]</span>
+            </div>
+          </div>
+          <p className="crypto-disclaimer">
+            Disclaimer: Contributions are voluntary and do not constitute payment for services.
+          </p>
+        </section>
 
         <section className="resource-section resource-cta-section">
           <h2>Digital Footprint Self-Audit</h2>

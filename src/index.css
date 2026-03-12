@@ -2382,6 +2382,53 @@ button.primary:hover {
   height: 14px;
 }
 
+/* Resource Page Crypto Section */
+.resource-crypto-section {
+  background: var(--bg-panel);
+  padding: var(--space-md);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  margin-top: var(--space-lg);
+}
+
+.crypto-addresses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0;
+}
+
+.crypto-addresses .crypto-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: var(--space-xs);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+}
+
+.crypto-addresses .crypto-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+}
+
+.crypto-addresses .crypto-address {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  color: var(--text-subtle);
+  word-break: break-all;
+}
+
+.crypto-disclaimer {
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+  font-style: italic;
+  margin-top: var(--space-sm);
+}
+
 /* ===========================================
    LEGAL PAGES & OPERATING PRINCIPLES
    =========================================== */
