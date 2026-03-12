@@ -450,6 +450,98 @@ button.primary:hover {
   }
 }
 
+/* Comparison Table */
+.comparison-table {
+  margin-top: var(--space-md);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 700px;
+}
+
+.comparison-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.comparison-header > div {
+  padding: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.comparison-header .comparison-adr {
+  color: var(--accent-gold);
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row > div {
+  padding: var(--space-sm);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+}
+
+.comparison-row .comparison-feature {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.comparison-row .check {
+  color: var(--accent-gold);
+}
+
+.comparison-row .cross {
+  color: var(--text-subtle);
+}
+
+.comparison-bridge {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-panel);
+  border: 1px solid var(--border-gold);
+  border-radius: 4px;
+  max-width: 700px;
+}
+
+.comparison-bridge p {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .comparison-header,
+  .comparison-row {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .comparison-header > div,
+  .comparison-row > div {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
 /* How It Works */
 .process-grid {
   display: grid;

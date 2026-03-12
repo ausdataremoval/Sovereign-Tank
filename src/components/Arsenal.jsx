@@ -13,7 +13,7 @@ const Arsenal = () => {
         'Strategic advice for manual removal',
         'Typically delivered within 48 business hours'
       ],
-      buttonText: 'Start My Data Exposure Audit',
+      buttonText: 'Analyze My Exposure',
       href: '/checkout/audit',
       recommended: false
     },
@@ -29,7 +29,7 @@ const Arsenal = () => {
         'Founding Member certificate',
         'Limited early supporter offer'
       ],
-      buttonText: 'Join as a Founding Member',
+      buttonText: 'Secure My Identity',
       href: '/checkout/founding-member',
       recommended: true
     },
@@ -44,7 +44,7 @@ const Arsenal = () => {
         'Post-request follow-up for persistent listings',
         'Final status report & documentation'
       ],
-      buttonText: 'Request Data Removal',
+      buttonText: 'Eradicate My Footprint',
       href: '/checkout/cleanup',
       recommended: false
     },

@@ -112,6 +112,50 @@ const App = () => {
           <TrustSection />
         </div>
 
+        {/* Free vs ADR Comparison */}
+        <section className="section reveal container" id="comparison">
+          <p className="section-label">Why Choose Us</p>
+          <h2>Free Tools Show You the Problem. We Provide the Solution.</h2>
+          <p className="section-intro">
+            Services like Have I Been Pwned confirm you've been exposed. Australian Data Removal actually does something about it.
+          </p>
+          <div className="comparison-table">
+            <div className="comparison-header">
+              <div className="comparison-feature">Feature</div>
+              <div className="comparison-free">Free Tools</div>
+              <div className="comparison-adr">ADR</div>
+            </div>
+            <div className="comparison-row">
+              <div className="comparison-feature">Exposure Detection</div>
+              <div className="comparison-free"><span className="check">Yes</span></div>
+              <div className="comparison-adr"><span className="check">Yes (Deep Audit)</span></div>
+            </div>
+            <div className="comparison-row">
+              <div className="comparison-feature">Data Broker Identification</div>
+              <div className="comparison-free"><span className="cross">No</span></div>
+              <div className="comparison-adr"><span className="check">Yes</span></div>
+            </div>
+            <div className="comparison-row">
+              <div className="comparison-feature">Manual Removal Advocacy</div>
+              <div className="comparison-free"><span className="cross">No</span></div>
+              <div className="comparison-adr"><span className="check">Yes</span></div>
+            </div>
+            <div className="comparison-row">
+              <div className="comparison-feature">Ongoing Risk Mitigation</div>
+              <div className="comparison-free"><span className="cross">No</span></div>
+              <div className="comparison-adr"><span className="check">Yes</span></div>
+            </div>
+            <div className="comparison-row">
+              <div className="comparison-feature">Australian Specialist Support</div>
+              <div className="comparison-free"><span className="cross">No</span></div>
+              <div className="comparison-adr"><span className="check">Yes</span></div>
+            </div>
+          </div>
+          <div className="comparison-bridge">
+            <p>HIBP confirms the breach; ADR handles the cleanup. While free tools identify exposure, our human-led process actively removes your sensitive data from the sources that expose you.</p>
+          </div>
+        </section>
+
         {/* How It Works */}
         <section className="section reveal container" id="how-it-works">
           <p className="section-label">Process</p>
