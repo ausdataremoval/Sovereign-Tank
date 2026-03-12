@@ -82,7 +82,7 @@ const App = () => {
             </button>
           </div>
           <p className="hero-note">
-            Secure checkout. Manual handling. Digital Risk Summary delivered within 48 hours.
+            Secure checkout. Manual handling. Digital Risk Summary typically delivered within 48 business hours.
           </p>
         </section>
 
@@ -109,7 +109,7 @@ const App = () => {
             <div className="process-step">
               <div className="step-num">03</div>
               <h3>Receive Your Report</h3>
-              <p>We investigate manually and deliver your Digital Risk Summary within 48 hours.</p>
+              <p>We investigate manually and typically deliver your Digital Risk Summary within 48 business hours.</p>
             </div>
             <div className="process-step">
               <div className="step-num">04</div>
@@ -159,6 +159,8 @@ const App = () => {
             <div className="footer-brand">
               <h4>Australian Data Removal</h4>
               <p>Australian-led digital exposure audit and manual data removal services.</p>
+              <p className="footer-abn">ABN 86 921 751 764</p>
+              <p className="footer-location">Perth, Western Australia</p>
             </div>
             <div className="footer-links">
               <h5>LEGAL</h5>
@@ -172,8 +174,8 @@ const App = () => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Australian Data Removal. All rights reserved.</p>
-            <p>Australian-owned. Manual case handling. Structured digital risk documentation.</p>
+            <p>&copy; {new Date().getFullYear()} Australian Data Removal (ABN 86 921 751 764). All rights reserved.</p>
+            <p>Australian-owned and operated. Manual case handling. Best-efforts data removal advocacy.</p>
           </div>
         </div>
       </footer>
@@ -190,21 +192,114 @@ const App = () => {
       {/* Legal Modal */}
       {legalContent && (
         <div className="modal-overlay" onClick={() => setLegalContent(null)}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
+          <div className="modal-content legal-modal" onClick={e => e.stopPropagation()}>
             <button className="close-modal" onClick={() => setLegalContent(null)}>&times;</button>
             <h2>{legalContent === 'privacy' ? 'Privacy Policy' : 'Terms of Service'}</h2>
             {legalContent === 'privacy' ? (
-              <>
-                <p>We collect only the information necessary to perform your data exposure audit and removal services.</p>
-                <p>Your personal information is handled securely and is never shared with third parties for marketing purposes.</p>
-                <p>All audit data is retained only for the duration required to complete your service and is securely deleted thereafter.</p>
-              </>
+              <div className="legal-text">
+                <p className="legal-intro">Australian Data Removal (ABN 86 921 751 764, "we", "us", "our") is committed to protecting your privacy in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).</p>
+                
+                <h3>1. Information We Collect</h3>
+                <p>We collect personal information necessary to provide our data exposure audit and removal services, including:</p>
+                <ul>
+                  <li>Contact details (name, email address, phone number)</li>
+                  <li>Search identifiers (names, aliases, usernames, phone numbers, email addresses you wish us to investigate)</li>
+                  <li>Payment information (processed securely via Stripe through Paperform)</li>
+                  <li>Communications and correspondence with us</li>
+                </ul>
+                
+                <h3>2. How We Collect Information</h3>
+                <p>We collect information directly from you when you submit intake forms via Paperform, communicate with us via email or phone, or engage our services. We do not collect information from third parties for marketing purposes.</p>
+                
+                <h3>3. Purpose of Collection</h3>
+                <p>We use your personal information to:</p>
+                <ul>
+                  <li>Perform data exposure audits on your behalf</li>
+                  <li>Submit removal and opt-out requests to data brokers</li>
+                  <li>Communicate with you regarding your case</li>
+                  <li>Process payments for services</li>
+                  <li>Comply with legal obligations</li>
+                </ul>
+                
+                <h3>4. Disclosure to Third Parties</h3>
+                <p>We may disclose your information to:</p>
+                <ul>
+                  <li>Paperform (form processing)</li>
+                  <li>Stripe (payment processing)</li>
+                  <li>Data brokers and directories (for the purpose of submitting removal requests on your behalf)</li>
+                </ul>
+                <p>We do not sell, rent, or share your personal information for marketing purposes.</p>
+                
+                <h3>5. Data Retention</h3>
+                <p>We retain your personal information only for as long as necessary to complete your service and comply with legal obligations. Audit data is typically retained for 12 months following service completion, after which it is securely deleted unless you request earlier deletion.</p>
+                
+                <h3>6. Access and Correction</h3>
+                <p>You have the right to access and request correction of your personal information. To make a request, contact us at hello@ausdataremoval.com.au.</p>
+                
+                <h3>7. Complaints</h3>
+                <p>If you believe we have breached your privacy, please contact us at hello@ausdataremoval.com.au. If you are not satisfied with our response, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au.</p>
+                
+                <h3>8. Contact</h3>
+                <p>Australian Data Removal<br />ABN 86 921 751 764<br />Perth, Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
+                
+                <p className="legal-updated">Last updated: March 2026</p>
+              </div>
             ) : (
-              <>
-                <p>Australian Data Removal provides data exposure audits and manual removal services as described on this website.</p>
-                <p>Results may vary depending on individual circumstances and the responsiveness of third-party data brokers.</p>
-                <p>Due to the nature of manual audit work, refunds are assessed on a case-by-case basis after service delivery.</p>
-              </>
+              <div className="legal-text">
+                <p className="legal-intro">These Terms of Service ("Terms") govern your use of the services provided by Australian Data Removal (ABN 86 921 751 764, "we", "us", "our").</p>
+                
+                <h3>1. Services</h3>
+                <p>Australian Data Removal provides manual data exposure audits and data removal services. We investigate where your personal information appears online and, where engaged, submit removal and opt-out requests on your behalf.</p>
+                
+                <h3>2. Service Limitations</h3>
+                <p>Our services are provided on a best-efforts basis. We cannot guarantee:</p>
+                <ul>
+                  <li>Complete removal of all personal data from the internet</li>
+                  <li>Specific outcomes or response times from third-party data brokers</li>
+                  <li>Prevention of future data collection by third parties</li>
+                </ul>
+                <p>Results depend on the policies and responsiveness of third-party data brokers and directories, which are outside our control.</p>
+                
+                <h3>3. Consumer Guarantee Rights</h3>
+                <p>Our services come with guarantees that cannot be excluded under the Australian Consumer Law. For major failures with the service, you are entitled to cancel your service contract and obtain a refund for the unused portion. You are also entitled to choose a refund or replacement for major failures. If a failure does not amount to a major failure, you are entitled to have the problem corrected in a reasonable time.</p>
+                
+                <h3>4. Refunds and Cancellations</h3>
+                <p>Due to the nature of manual audit work (which commences immediately upon payment), refunds are assessed on a case-by-case basis:</p>
+                <ul>
+                  <li>If work has not yet commenced, a full refund may be provided</li>
+                  <li>If work has commenced, a partial refund may be offered at our discretion</li>
+                  <li>Completed services are generally non-refundable unless a major failure has occurred</li>
+                </ul>
+                <p>To request a refund, contact us at hello@ausdataremoval.com.au within 14 days of purchase.</p>
+                
+                <h3>5. Payment</h3>
+                <p>All prices are in Australian Dollars (AUD) and inclusive of GST where applicable. Payment is processed securely via Stripe through Paperform.</p>
+                
+                <h3>6. Your Obligations</h3>
+                <p>You agree to:</p>
+                <ul>
+                  <li>Provide accurate and complete information in your intake form</li>
+                  <li>Only request audits and removals for your own personal information or information you are legally authorised to manage</li>
+                  <li>Not use our services for any unlawful purpose</li>
+                </ul>
+                
+                <h3>7. Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, our liability for any claim arising from or related to our services is limited to the amount you paid for the relevant service. We are not liable for any indirect, incidental, or consequential damages.</p>
+                
+                <h3>8. Dispute Resolution</h3>
+                <p>If you have a dispute regarding our services, please contact us at hello@ausdataremoval.com.au. We will attempt to resolve the matter in good faith. If we cannot reach a resolution, either party may refer the dispute to the relevant consumer protection agency in Western Australia.</p>
+                
+                <h3>9. Governing Law</h3>
+                <p>These Terms are governed by the laws of Western Australia and the Commonwealth of Australia. You submit to the non-exclusive jurisdiction of the courts of Western Australia.</p>
+                
+                <h3>10. Changes to Terms</h3>
+                <p>We may update these Terms from time to time. The current version will always be available on our website.</p>
+                
+                <h3>11. Contact</h3>
+                <p>Australian Data Removal<br />ABN 86 921 751 764<br />Perth, Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
+                
+                <p className="legal-updated">Last updated: March 2026</p>
+              </div>
             )}
           </div>
         </div>

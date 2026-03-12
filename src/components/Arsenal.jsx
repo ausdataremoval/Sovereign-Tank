@@ -11,7 +11,7 @@ const Arsenal = () => {
         'Manual investigation of data broker exposure',
         'Comprehensive Digital Risk Summary',
         'Recommended next steps for removal',
-        'Delivered within 48 hours'
+        'Typically delivered within 48 business hours'
       ],
       buttonText: 'Start My Exposure Audit',
       paperformId: 't86h5x0u'

@@ -563,6 +563,92 @@ button.primary:hover {
   background: none;
 }
 
+/* Legal Modal */
+.legal-modal {
+  max-width: 720px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.legal-modal h2 {
+  padding-right: 2rem;
+}
+
+.legal-text {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.legal-text h3 {
+  font-size: 0.95rem;
+  color: var(--accent-gold);
+  margin-top: var(--space-md);
+  margin-bottom: 0.5rem;
+}
+
+.legal-text p {
+  margin-bottom: 0.75rem;
+}
+
+.legal-text ul {
+  list-style: none;
+  margin-bottom: 0.75rem;
+  padding-left: 0;
+}
+
+.legal-text li {
+  margin-bottom: 0.4rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.legal-text li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 4px;
+  height: 4px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+}
+
+.legal-intro {
+  color: var(--text-main);
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.legal-updated {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Footer ABN styles */
+.footer-abn {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.footer-location {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-contact h5 {
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.05em;
+}
+
 /* Scroll Reveal */
 .reveal {
   opacity: 0;
