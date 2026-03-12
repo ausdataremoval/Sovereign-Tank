@@ -6,7 +6,7 @@ const Arsenal = () => {
       id: 1,
       name: 'Personal Data Exposure Audit',
       price: 'AUD $200',
-      desc: 'A structured manual investigation identifying where your personal information appears across data brokers, listing sites, and public directories.',
+      desc: 'A specialist manual investigation to find the personal data you didn\'t know was public. We identify your exposure across data brokers and directories so you can close the gaps.',
       specs: [
         'Manual investigation of data broker exposure',
         'Digital Risk Summary',
@@ -22,13 +22,13 @@ const Arsenal = () => {
       id: 2,
       name: 'Founding Member Privacy Package',
       price: 'AUD $700',
-      desc: 'An early-supporter package combining a full exposure audit, expanded investigation, and priority handling.',
+      desc: 'Limited to the first 50 supporters. Secure priority status and direct access to our investigators while we establish the ADR network.',
       specs: [
         'Full digital exposure audit',
         'Expanded investigation of data listings',
         'Priority case handling',
         'Founding Member certificate recognising early support',
-        'Limited early supporter availability'
+        'Direct access to lead investigators'
       ],
       buttonText: 'Join as a Founding Member',
       href: '/checkout/founding-member',
@@ -45,7 +45,7 @@ const Arsenal = () => {
         'One follow-up round where required',
         'Documentation of removal actions'
       ],
-      buttonText: 'Request Data Removal',
+      buttonText: 'Start Removal Advocacy',
       href: '/checkout/cleanup',
       recommended: false
     },

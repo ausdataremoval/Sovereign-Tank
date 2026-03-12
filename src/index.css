@@ -389,6 +389,25 @@ button.primary:hover {
   color: var(--accent-gold-light);
 }
 
+/* Trust Strip - Mobile/Desktop visibility */
+.mobile-trust-strip {
+  display: none;
+}
+
+.desktop-trust-strip {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .mobile-trust-strip {
+    display: block;
+  }
+
+  .desktop-trust-strip {
+    display: none;
+  }
+}
+
 /* Trust Strip Section */
 .trust-strip-section {
   padding: var(--space-sm) 0;

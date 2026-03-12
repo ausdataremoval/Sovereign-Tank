@@ -62,12 +62,17 @@ const App = () => {
   return (
     <div className="app-container">
       <main>
+        {/* Trust Strip - Above fold on mobile */}
+        <div className="mobile-trust-strip">
+          <TrustSection />
+        </div>
+
         {/* Hero Section */}
         <section className="section reveal" id="hero">
           <div className="hero-layout">
             <div className="hero-main">
               <p className="hero-label">Australian Data Removal</p>
-              <h1 className="hero-title">Your Personal Data Is Already Out There.</h1>
+              <h1 className="hero-title">Your Personal Data Is Already Out There. We Help You Take It Back.</h1>
               <p className="hero-subtitle">
                 We find it, document it, and help you remove it — manually, by a real person.
               </p>
@@ -102,8 +107,10 @@ const App = () => {
           </div>
         </section>
 
-        {/* Trust Section */}
-        <TrustSection />
+        {/* Trust Section - Desktop */}
+        <div className="desktop-trust-strip">
+          <TrustSection />
+        </div>
 
         {/* How It Works */}
         <section className="section reveal container" id="how-it-works">
