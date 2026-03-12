@@ -72,7 +72,7 @@ const App = () => {
             <span className="watchdog-shield-pulse"></span>
           </div>
           <div className="watchdog-status">
-            <span className="watchdog-label">WATCHDOG ACTIVE</span>
+            <span className="watchdog-label">ADR SECURITY: ACTIVE</span>
             <span className="watchdog-sublabel">Connection Secured</span>
           </div>
           <div className="watchdog-metrics">
@@ -110,6 +110,7 @@ const App = () => {
                   View Services
                 </a>
               </div>
+              <p className="hero-friction-reducer">Manual investigation. No automated scraping. No data resale.</p>
             </div>
           </div>
         </section>
@@ -118,7 +119,7 @@ const App = () => {
         <section className="section reveal container" id="exposure-check">
           <h2>Start With a Free Exposure Check</h2>
           <p className="section-intro">
-            Before choosing a service, check whether your email address has appeared in known data breaches.
+            Before choosing a service, check whether your email address has appeared in known breaches. This free check does not collect or store your personal data.
           </p>
           <div className="gateway-cta-group">
             <a 
@@ -142,6 +143,7 @@ const App = () => {
           <p className="section-intro">
             Professional digital exposure audits and manual removal services.
           </p>
+          <p className="checkout-reassurance">Secure payment processed by Stripe. No client data is stored in AI systems or sold to third parties.</p>
           <Arsenal />
         </section>
 

@@ -2,11 +2,11 @@ import React from 'react';
 
 const TrustSection = () => {
   const markers = [
-    'Australian-owned',
-    'Perth-based',
-    'Encrypted connections',
-    'No tracking cookies',
-    'Manual case review'
+    'Australian-Owned',
+    'Perth-Based Investigation',
+    'Secure Stripe Payments',
+    'Privacy-First Handling',
+    'Manual Case Review'
   ];
 
   return (

@@ -436,6 +436,32 @@ button.primary:hover {
   }
 }
 
+.hero-friction-reducer {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+  margin-top: var(--space-sm);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 900px) {
+  .hero-friction-reducer {
+    text-align: center;
+  }
+}
+
+/* Checkout Reassurance */
+.checkout-reassurance {
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-md);
+  padding: 0.75rem 1rem;
+  background: rgba(46, 204, 113, 0.05);
+  border: 1px solid rgba(46, 204, 113, 0.1);
+  border-radius: 4px;
+  max-width: 600px;
+}
+
 /* CTA Link Styles */
 .cta-link {
   display: inline-block;
