@@ -629,6 +629,18 @@ button.primary:hover {
   color: var(--bg-primary);
 }
 
+/* AI and Your Privacy */
+.ai-privacy-content {
+  max-width: 680px;
+}
+
+.ai-privacy-content p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: var(--space-sm);
+}
+
 /* Additional Services */
 .additional-services {
   margin-top: var(--space-xl);

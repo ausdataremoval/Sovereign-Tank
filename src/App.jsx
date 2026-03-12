@@ -191,6 +191,16 @@ const App = () => {
           </div>
         </section>
 
+        {/* AI and Your Privacy */}
+        <section className="section reveal container" id="ai-privacy">
+          <h2>AI and Your Privacy</h2>
+          <div className="ai-privacy-content">
+            <p>We use AI tools for administrative research and drafting, but never as a repository for your sensitive personal identifiers.</p>
+            <p>While AI helps us refine our internal processes and communication, all exposure audits and removal actions are executed by human investigators.</p>
+            <p>Your identifying data remains within our secure, Australian-governed infrastructure. We do not feed client PII into third-party AI models for training or processing.</p>
+          </div>
+        </section>
+
         {/* Service Principles */}
         <section className="values-section">
           <div className="container">
