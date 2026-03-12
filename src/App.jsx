@@ -168,7 +168,7 @@ const App = () => {
             <div className="footer-contact">
               <h5>CONTACT</h5>
               <p><a href="mailto:hello@ausdataremoval.com.au">hello@ausdataremoval.com.au</a></p>
-              <p>1300 XXX XXX</p>
+              <p><a href="tel:1300504079">1300 504 079</a></p>
             </div>
           </div>
           <div className="footer-bottom">
