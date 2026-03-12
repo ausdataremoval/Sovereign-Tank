@@ -62,11 +62,6 @@ const App = () => {
   return (
     <div className="app-container">
       <main>
-        {/* Trust Strip - Above fold on mobile */}
-        <div className="mobile-trust-strip">
-          <TrustSection />
-        </div>
-
         {/* Hero Section */}
         <section className="section reveal" id="hero">
           <div className="hero-layout">
@@ -87,11 +82,6 @@ const App = () => {
             </div>
           </div>
         </section>
-
-        {/* Trust Section - Desktop */}
-        <div className="desktop-trust-strip">
-          <TrustSection />
-        </div>
 
         {/* Exposure Check Block */}
         <section className="section reveal container" id="exposure-check">
@@ -124,104 +114,8 @@ const App = () => {
           <Arsenal />
         </section>
 
-        {/* How It Works */}
-        <section className="section reveal container" id="how-it-works">
-          <p className="section-label">Process</p>
-          <h2>How It Works</h2>
-          <p className="section-intro">
-            A transparent, manual process for understanding and controlling your digital exposure.
-          </p>
-          <div className="process-grid">
-            <div className="process-step">
-              <div className="step-num">01</div>
-              <h3>Book Your Audit</h3>
-              <p>Book your Personal Data Exposure Audit and complete secure payment online.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-num">02</div>
-              <h3>Complete Intake</h3>
-              <p>Complete a short intake form with the information required for investigation.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-num">03</div>
-              <h3>Receive Your Report</h3>
-              <p>We conduct a manual investigation and typically deliver your Digital Risk Summary within 48 business hours.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-num">04</div>
-              <h3>Take Action</h3>
-              <p>Act on the findings yourself or engage us to perform the full Digital Clean-Up service.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* How We Use Technology */}
-        <section className="section reveal container" id="technology">
-          <p className="section-label">Our Approach</p>
-          <h2>How We Use Technology</h2>
-          <div className="technology-content">
-            <p>Australian Data Removal uses technology to support careful human investigation — not to replace it.</p>
-            <p>Modern tools help us scan large volumes of publicly available information, organise findings, and track removal requests. They do not make decisions or act on your behalf without a specialist reviewing the case.</p>
-            <p>Every engagement involves manual review. We confirm whether information actually relates to you, assess the potential real-world risk, and determine the appropriate removal approach for each platform.</p>
-            <p>We do not offer "magic button" privacy or bulk automation services. The internet does not work that way.</p>
-            <p>Instead, our process focuses on clarity and transparency. You receive a clear record of what was found, what removal requests were made, and which items cannot currently be removed — explained in plain English.</p>
-          </div>
-        </section>
-
-        {/* Who This Is For */}
-        <section className="section reveal container" id="audience">
-          <p className="section-label">Clients</p>
-          <h2>Who This Is For</h2>
-          <div className="audience-grid">
-            <div className="audience-item">Individuals wanting to understand their digital exposure</div>
-            <div className="audience-item">Families concerned about public listing sites</div>
-            <div className="audience-item">Professionals and executives seeking privacy control</div>
-            <div className="audience-item">People wanting a manual, human-led alternative to automated tools</div>
-          </div>
-        </section>
-
-        {/* What You Receive */}
-        <section className="section reveal container" id="receive">
-          <p className="section-label">Deliverables</p>
-          <h2>What You Receive</h2>
-          <div className="receive-list">
-            <div className="receive-item">Digital Risk Summary</div>
-            <div className="receive-item">Identified broker and public directory exposures</div>
-            <div className="receive-item">Recommended next steps</div>
-            <div className="receive-item">Optional clean-up pathway</div>
-            <div className="receive-item">Human follow-up where required</div>
-          </div>
-        </section>
-
-        {/* AI and Your Privacy */}
-        <section className="section reveal container" id="ai-privacy">
-          <h2>AI and Your Privacy</h2>
-          <div className="ai-privacy-content">
-            <p>We use AI tools for administrative research and drafting, but never as a repository for your sensitive personal identifiers.</p>
-            <p>While AI helps us refine our internal processes and communication, all exposure audits and removal actions are executed by human investigators.</p>
-            <p>Your identifying data remains within our secure, Australian-governed infrastructure. We do not feed client PII into third-party AI models for training or processing.</p>
-          </div>
-        </section>
-
-        {/* Service Principles */}
-        <section className="values-section">
-          <div className="container">
-            <div className="values-grid">
-              <div className="values-item">
-                <h4>Local Oversight</h4>
-                <p>All investigations are conducted from our Perth office.</p>
-              </div>
-              <div className="values-item">
-                <h4>Manual Verification</h4>
-                <p>Data broker listings are reviewed by a person to confirm they actually belong to you.</p>
-              </div>
-              <div className="values-item">
-                <h4>No Data Reselling</h4>
-                <p>Your intake information is used only for the purposes of investigation and removal requests. It is never sold or shared.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Trust Section */}
+        <TrustSection />
       </main>
 
       {/* Footer */}

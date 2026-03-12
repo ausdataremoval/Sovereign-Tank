@@ -17,11 +17,10 @@ export default function Start() {
   return (
     <main className="start-page">
       <div className="start-container">
-        <h1>Start Your Digital Clean</h1>
+        <h1>Complete Your Case Intake</h1>
 
         <p className="start-subtitle">
-          Complete the secure intake process below so we can begin your
-          Australian Data Removal service.
+          Please complete the form below so we can begin reviewing your request.
         </p>
 
         <div className="form-wrapper">

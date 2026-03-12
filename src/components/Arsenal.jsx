@@ -4,68 +4,54 @@ const Arsenal = () => {
   const primaryProducts = [
     {
       id: 1,
-      name: 'Personal Data Exposure Audit',
+      name: 'Exposure Audit',
       price: 'AUD $200',
-      focus: 'Mapping the Problem',
-      desc: 'A comprehensive manual investigation of your digital footprint across data brokers and search sites.',
-      specs: [
-        'Specialist investigation of broker exposure',
-        'Digital Risk Summary & findings',
-        'Strategic advice for manual removal',
-        'Typically delivered within 48 business hours'
-      ],
-      buttonText: 'Start Manual Audit',
+      desc: 'Identify where your personal data is exposed online and understand the risks to your privacy.',
+      buttonText: 'Start Audit',
       href: '/checkout/audit',
       recommended: false
     },
     {
       id: 2,
-      name: 'Founding Member Package',
+      name: 'Founding Member',
       price: 'AUD $700',
-      focus: 'Active Protection',
-      desc: 'Full exposure audit plus 12 months of active removal advocacy and ongoing monitoring.',
+      desc: 'Priority support and structured removal requests submitted on your behalf.',
       specs: [
-        'Priority Digital Exposure Audit',
-        'Comprehensive removal advocacy',
-        'Direct specialist consultation',
-        'Founding Member certificate',
-        '12 months ongoing monitoring'
+        'Priority case handling',
+        'Annual exposure re-scan',
+        'Member report archive',
+        'Lifetime pricing lock'
       ],
-      buttonText: 'Secure My Identity',
+      buttonText: 'Join Founding Member',
       href: '/checkout/founding-member',
       recommended: true,
-      badge: 'Founding Tier'
+      badge: 'Recommended'
     },
     {
       id: 3,
       name: 'Full Digital Clean-Up',
-      price: 'AUD $1,000',
-      focus: 'Total Resolution',
-      desc: 'Enterprise-grade eradication of your personal data from public sources and specialist investigation.',
-      specs: [
-        'Professional removal request management',
-        'Up to 15 targeted removal submissions',
-        'Post-request follow-up for persistent listings',
-        'Final status report & documentation'
-      ],
-      buttonText: 'Request Full Clean-Up',
+      price: 'AUD $1,000+',
+      desc: 'Manual removal requests and exposure suppression across major data broker and search platforms.',
+      buttonText: 'Start Clean-Up',
       href: '/checkout/cleanup',
       recommended: false
     },
   ];
 
-  const additionalServices = [
-    {
-      name: 'Ongoing Monitoring',
-      desc: 'Quarterly re-scans to detect new exposures as they appear.',
-      price: 'Contact for pricing'
-    },
-    {
-      name: 'Executive Privacy Briefing',
-      desc: 'One-on-one consultation for high-profile individuals and executives.',
-      price: 'Contact for pricing'
-    }
-  ];
+  const diyProduct = {
+    name: 'DIY Data Removal Roadmap',
+    price: 'AUD $79',
+    desc: 'Step-by-step guide for requesting removal from major data brokers and public directory sites yourself.',
+    specs: [
+      'PDF roadmap',
+      'Direct removal links',
+      'Copy-paste request templates',
+      'Progress checklist',
+      'AUD $79 credit if upgrading to a manual service'
+    ],
+    buttonText: 'Get the DIY Roadmap',
+    href: '/checkout/diy-roadmap'
+  };
 
   return (
     <>
@@ -73,20 +59,20 @@ const Arsenal = () => {
         {primaryProducts.map(product => (
           <div key={product.id} className={`product-card ${product.recommended ? 'recommended' : ''}`}>
             {product.badge && <span className="recommended-badge">{product.badge}</span>}
-            <p className="product-focus">{product.focus}</p>
             <div className="product-header">
               <h3>{product.name}</h3>
               <div className="price">{product.price}</div>
             </div>
             <p className="product-desc">{product.desc}</p>
-            <div className="product-inclusions">
-              <p className="inclusions-label">Inclusions</p>
-              <ul>
-                {product.specs.map((spec, i) => (
-                  <li key={i}>{spec}</li>
-                ))}
-              </ul>
-            </div>
+            {product.specs && (
+              <div className="product-inclusions">
+                <ul>
+                  {product.specs.map((spec, i) => (
+                    <li key={i}>{spec}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <a
               href={product.href}
               className="acquire-btn"
@@ -97,19 +83,28 @@ const Arsenal = () => {
         ))}
       </div>
 
-      <div className="additional-services">
-        <h3 className="additional-services-title">Additional Services</h3>
-        <div className="additional-services-grid">
-          {additionalServices.map((service, i) => (
-            <div key={i} className="additional-service-item">
-              <div className="additional-service-header">
-                <h4>{service.name}</h4>
-                <span className="additional-service-price">{service.price}</span>
-              </div>
-              <p>{service.desc}</p>
-            </div>
-          ))}
+      <div className="diy-section">
+        <div className="diy-card">
+          <div className="diy-header">
+            <h4>{diyProduct.name}</h4>
+            <span className="diy-price">{diyProduct.price}</span>
+          </div>
+          <p className="diy-desc">{diyProduct.desc}</p>
+          <div className="diy-inclusions">
+            <ul>
+              {diyProduct.specs.map((spec, i) => (
+                <li key={i}>{spec}</li>
+              ))}
+            </ul>
+          </div>
+          <a href={diyProduct.href} className="diy-btn">
+            {diyProduct.buttonText}
+          </a>
         </div>
+      </div>
+
+      <div className="legal-disclaimer">
+        <p>We submit formal removal requests using official opt-out channels. Some sites and records cannot be removed; additional escalation work may require further service engagement.</p>
       </div>
     </>
   );
