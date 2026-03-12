@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Arsenal from './components/Arsenal';
 import DeedModal from './components/DeedModal';
 import TrustSection from './components/TrustSection';
+import FounderCard from './components/FounderCard';
 
 const App = () => {
   const [showDeed, setShowDeed] = useState(false);
@@ -64,26 +65,36 @@ const App = () => {
       <main>
         {/* Hero Section */}
         <section className="section reveal" id="hero">
-          <h1 className="hero-title">Your Personal Data Is Already Out There.</h1>
-          <p className="hero-subtitle">
-            We find it, document it, and help you remove it. Manually. By a real person.
-          </p>
-          <div className="hero-actions">
-            <button
-              className="primary"
-              data-paperform-id="t86h5x0u"
-              data-popup-button="1"
-              onClick={() => {
-                setIsLoading(true);
-                setTimeout(() => setIsLoading(false), 3000);
-              }}
-            >
-              Start My Exposure Audit
-            </button>
+          <div className="hero-layout">
+            <div className="hero-main">
+              <h1 className="hero-title">Your Personal Data Is Already Out There.</h1>
+              <p className="hero-subtitle">
+                We find it, document it, and help you remove it. Manually. By a real person.
+              </p>
+              <div className="hero-actions">
+                <button
+                  className="primary"
+                  data-paperform-id="t86h5x0u"
+                  data-popup-button="1"
+                  onClick={() => {
+                    setIsLoading(true);
+                    setTimeout(() => setIsLoading(false), 3000);
+                  }}
+                >
+                  Get Help With a Removal
+                </button>
+              </div>
+              <p className="hero-note">
+                Secure checkout. Manual handling. Digital Risk Summary typically delivered within 48 business hours.
+              </p>
+              <p className="hero-reassurance">
+                A specialist reviews every request and replies within 48 business hours. No AI decisions. No offshore call centres.
+              </p>
+            </div>
+            <div className="hero-aside">
+              <FounderCard />
+            </div>
           </div>
-          <p className="hero-note">
-            Secure checkout. Manual handling. Digital Risk Summary typically delivered within 48 business hours.
-          </p>
         </section>
 
         {/* Trust Section */}
@@ -161,9 +172,11 @@ const App = () => {
               <p>Australian-led digital exposure audit and manual data removal services.</p>
               <p className="footer-abn">ABN 86 921 751 764</p>
               <p className="footer-location">Perth, Western Australia</p>
+              <p className="footer-operator">Operated by the registered ABN holder</p>
             </div>
             <div className="footer-links">
-              <h5>LEGAL</h5>
+              <h5>COMPANY</h5>
+              <a href="/about">About</a>
               <button onClick={() => setLegalContent('privacy')}>Privacy Policy</button>
               <button onClick={() => setLegalContent('terms')}>Terms of Service</button>
             </div>
@@ -240,7 +253,7 @@ const App = () => {
                 <p>If you believe we have breached your privacy, please contact us at hello@ausdataremoval.com.au. If you are not satisfied with our response, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au.</p>
                 
                 <h3>8. Contact</h3>
-                <p>Australian Data Removal<br />ABN 86 921 751 764<br />Perth, Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
+                <p>Australian Data Removal<br />ABN 86 921 751 764<br />Operated by the registered ABN holder<br />Perth, Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
                 
                 <p className="legal-updated">Last updated: March 2026</p>
               </div>
@@ -296,7 +309,7 @@ const App = () => {
                 <p>We may update these Terms from time to time. The current version will always be available on our website.</p>
                 
                 <h3>11. Contact</h3>
-                <p>Australian Data Removal<br />ABN 86 921 751 764<br />Perth, Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
+                <p>Australian Data Removal<br />ABN 86 921 751 764<br />Operated by the registered ABN holder<br />Perth, Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
                 
                 <p className="legal-updated">Last updated: March 2026</p>
               </div>
