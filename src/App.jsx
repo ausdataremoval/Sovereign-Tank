@@ -64,9 +64,31 @@ const App = () => {
       {/* Watchdog Security Indicator */}
       <div className="watchdog-bar">
         <div className="watchdog-inner">
-          <span className="watchdog-pulse"></span>
-          <span className="watchdog-label">WATCHDOG: SECURE</span>
-          <span className="watchdog-details">HTTPS • No Tracking • AU Data Handling</span>
+          <div className="watchdog-shield">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L3 7V12C3 17.55 6.84 22.74 12 24C17.16 22.74 21 17.55 21 12V7L12 2Z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+              <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span className="watchdog-shield-pulse"></span>
+          </div>
+          <div className="watchdog-status">
+            <span className="watchdog-label">WATCHDOG ACTIVE</span>
+            <span className="watchdog-sublabel">Connection Secured</span>
+          </div>
+          <div className="watchdog-metrics">
+            <div className="watchdog-metric">
+              <span className="metric-indicator active"></span>
+              <span>HTTPS</span>
+            </div>
+            <div className="watchdog-metric">
+              <span className="metric-indicator active"></span>
+              <span>No Trackers</span>
+            </div>
+            <div className="watchdog-metric">
+              <span className="metric-indicator active"></span>
+              <span>AU Servers</span>
+            </div>
+          </div>
         </div>
       </div>
 

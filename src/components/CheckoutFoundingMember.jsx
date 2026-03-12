@@ -5,8 +5,14 @@ export default function CheckoutFoundingMember() {
   return (
     <main className="checkout-page">
       <div className="checkout-security-bar">
-        <span className="security-pulse"></span>
-        <span>SECURE CHECKOUT</span>
+        <div className="checkout-shield">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 7V12C3 17.55 6.84 22.74 12 24C17.16 22.74 21 17.55 21 12V7L12 2Z" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+            <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+        <span className="checkout-security-label">SECURE CHECKOUT</span>
+        <span className="checkout-security-sub">256-bit Encryption Active</span>
       </div>
       <div className="checkout-container">
         <div className="checkout-card">
