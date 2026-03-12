@@ -139,6 +139,21 @@ const App = () => {
           <Arsenal />
         </section>
 
+        {/* How We Use Technology */}
+        <section className="section reveal container" id="technology">
+          <h2>How We Use Technology</h2>
+          <div className="technology-content">
+            <p>Australian Data Removal combines careful human investigation with modern tools to locate and remove personal data from the internet.</p>
+            <p>Technology helps us scan large volumes of public information quickly, identify potential exposures, and organise removal requests. Automated tools alone cannot reliably assess context, legality, or the real-world impact of online information.</p>
+            <p>Every case we handle involves human review. Our analysts verify whether the information actually relates to you and determine the appropriate removal approach.</p>
+            <p>We do not rely on "magic button" solutions that promise instant results. The internet does not work that way.</p>
+            <p>Instead, our process is transparent. You receive a clear record of what was found, what actions were taken, and what information cannot be removed at this time.</p>
+            <blockquote className="technology-quote">
+              We don't do scare tactics, and we don't sell magic buttons. You always know what we found, what we removed, and what can't be removed yet — in plain English.
+            </blockquote>
+          </div>
+        </section>
+
         {/* Who This Is For */}
         <section className="section reveal container" id="audience">
           <h2>Who This Is For</h2>

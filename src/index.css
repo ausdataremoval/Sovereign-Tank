@@ -476,6 +476,30 @@ button.primary:hover {
   box-shadow: 0 0 6px var(--accent-gold-dim);
 }
 
+/* How We Use Technology */
+.technology-content {
+  max-width: 680px;
+}
+
+.technology-content p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: var(--space-sm);
+}
+
+.technology-quote {
+  margin-top: var(--space-md);
+  padding-left: var(--space-sm);
+  border-left: 3px solid var(--accent-gold);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
 /* What You Receive */
 .receive-list {
   display: flex;
