@@ -163,8 +163,22 @@ const App = () => {
               <p className="footer-location">Western Australia</p>
             </div>
             <div className="footer-links">
+              <h5>SERVICES</h5>
+              <a href="/checkout/audit">Exposure Audit</a>
+              <a href="/checkout/founding-member">Founding Member</a>
+              <a href="/checkout/cleanup">Full Clean-Up</a>
+              <a href="/checkout/diy-roadmap">DIY Roadmap</a>
+            </div>
+            <div className="footer-links">
+              <h5>RESOURCES</h5>
+              <a href="/resources">Privacy Resources</a>
+              <a href="/checklist">Digital Footprint Checklist</a>
+              <a href="/exposure-radar">Exposure Radar</a>
+              <a href="/support">Support Privacy Research</a>
+            </div>
+            <div className="footer-links">
               <h5>COMPANY</h5>
-              <a href="/about">About</a>
+              <a href="/members">Founding Members</a>
               <button onClick={() => setLegalContent('privacy')}>Privacy Policy</button>
               <button onClick={() => setLegalContent('terms')}>Terms of Service</button>
             </div>
