@@ -72,36 +72,17 @@ const App = () => {
           <div className="hero-layout">
             <div className="hero-main">
               <p className="hero-label">Australian Data Removal</p>
-              <h1 className="hero-title">Your Personal Data Is Already Out There. We Help You Take It Back.</h1>
+              <h1 className="hero-title">Take Control of Your Personal Data</h1>
               <p className="hero-subtitle">
-                We find it, document it, and help you remove it — manually, by a real person.
-              </p>
-              <p className="hero-desc">
-                Australian Data Removal provides structured digital exposure audits and human-led removal services for individuals, families, and professionals concerned about their online privacy.
+                Australian specialists helping individuals identify and remove exposed personal information from data brokers, search sites, and public records.
               </p>
               <div className="hero-actions">
-                <a href="/start" className="cta-link primary">
-                  Start My Exposure Audit
+                <a href="/checkout/audit" className="cta-link primary">
+                  Start Exposure Audit
                 </a>
-              </div>
-              <p className="hero-note">
-                Secure checkout. Human-reviewed service. Digital Risk Summary typically delivered within 48 hours.
-              </p>
-            </div>
-            <div className="hero-aside">
-              <div className="research-panel">
-                <p className="panel-label">Privacy Research & Collaboration</p>
-                <p className="panel-intro">Australian Data Removal supports responsible data practices through research and collaboration.</p>
-                <ul className="research-list">
-                  <li>Policy partnerships with Australian privacy advocates</li>
-                  <li>Academic collaboration on data broker behaviour</li>
-                  <li>Data breach research and public awareness initiatives</li>
-                </ul>
-                <p className="panel-note">A portion of annual net profits is allocated to privacy research, education, and initiatives that improve digital privacy outcomes.</p>
-                <div className="panel-contact">
-                  <p className="panel-contact-label">Research & Partnerships</p>
-                  <a href="mailto:research@ausdataremoval.com.au">research@ausdataremoval.com.au</a>
-                </div>
+                <a href="#services" className="cta-link secondary">
+                  View Services
+                </a>
               </div>
             </div>
           </div>
@@ -112,44 +93,24 @@ const App = () => {
           <TrustSection />
         </div>
 
-        {/* Free Gateway Section */}
-        <section className="section reveal container" id="gateway">
-          <h2>Check Your Breach Status</h2>
+        {/* Exposure Check Block */}
+        <section className="section reveal container" id="exposure-check">
+          <h2>Start With a Free Exposure Check</h2>
           <p className="section-intro">
-            Before requesting a manual audit, use this industry-standard tool to see if your email has appeared in a known data breach.
+            Before choosing a service, check whether your email address has appeared in known data breaches.
           </p>
-          <div className="gateway-cta">
+          <div className="gateway-cta-group">
             <a 
               href="https://haveibeenpwned.com/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="cta-link secondary"
+              className="cta-link primary"
             >
-              Check My Email (Free)
+              Check My Exposure
             </a>
-          </div>
-
-          <div className="gateway-comparison">
-            <div className="gateway-comparison-header">
-              <div className="gateway-col-free">Free Breach Check (HIBP)</div>
-              <div className="gateway-col-adr">ADR Specialist Audit ($200)</div>
-            </div>
-            <div className="gateway-comparison-row">
-              <div className="gateway-col-free">Checks known email-based leaks.</div>
-              <div className="gateway-col-adr">Maps your total digital footprint (Address, Phone, Public Records).</div>
-            </div>
-            <div className="gateway-comparison-row">
-              <div className="gateway-col-free">Automated, instant results.</div>
-              <div className="gateway-col-adr"><strong>Manual review</strong> by a Perth-based specialist.</div>
-            </div>
-            <div className="gateway-comparison-row">
-              <div className="gateway-col-free">Shows <em>that</em> you were breached.</div>
-              <div className="gateway-col-adr">Identifies <strong>where</strong> your data is currently exposed on broker sites.</div>
-            </div>
-            <div className="gateway-comparison-row">
-              <div className="gateway-col-free">No remediation or strategy.</div>
-              <div className="gateway-col-adr">Provides a tailored removal and advocacy strategy.</div>
-            </div>
+            <a href="/checkout/audit" className="cta-link secondary">
+              Get a Professional Exposure Audit
+            </a>
           </div>
         </section>
 
