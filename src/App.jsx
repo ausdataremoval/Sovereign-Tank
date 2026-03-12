@@ -112,48 +112,55 @@ const App = () => {
           <TrustSection />
         </div>
 
-        {/* Free vs ADR Comparison */}
-        <section className="section reveal container" id="comparison">
-          <p className="section-label">Why Choose Us</p>
-          <h2>Free Tools Show You the Problem. We Provide the Solution.</h2>
+        {/* Free Gateway Section */}
+        <section className="section reveal container" id="gateway">
+          <h2>Check Your Breach Status</h2>
           <p className="section-intro">
-            Services like Have I Been Pwned confirm you've been exposed. Australian Data Removal actually does something about it.
+            Before requesting a manual audit, use this industry-standard tool to see if your email has appeared in a known data breach.
           </p>
-          <div className="comparison-table">
-            <div className="comparison-header">
-              <div className="comparison-feature">Feature</div>
-              <div className="comparison-free">Free Tools</div>
-              <div className="comparison-adr">ADR</div>
+          <div className="gateway-cta">
+            <a 
+              href="https://haveibeenpwned.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="cta-link secondary"
+            >
+              Check My Email (Free)
+            </a>
+          </div>
+
+          <div className="gateway-comparison">
+            <div className="gateway-comparison-header">
+              <div className="gateway-col-free">Free Breach Check (HIBP)</div>
+              <div className="gateway-col-adr">ADR Specialist Audit ($200)</div>
             </div>
-            <div className="comparison-row">
-              <div className="comparison-feature">Exposure Detection</div>
-              <div className="comparison-free"><span className="check">Yes</span></div>
-              <div className="comparison-adr"><span className="check">Yes (Deep Audit)</span></div>
+            <div className="gateway-comparison-row">
+              <div className="gateway-col-free">Checks known email-based leaks.</div>
+              <div className="gateway-col-adr">Maps your total digital footprint (Address, Phone, Public Records).</div>
             </div>
-            <div className="comparison-row">
-              <div className="comparison-feature">Data Broker Identification</div>
-              <div className="comparison-free"><span className="cross">No</span></div>
-              <div className="comparison-adr"><span className="check">Yes</span></div>
+            <div className="gateway-comparison-row">
+              <div className="gateway-col-free">Automated, instant results.</div>
+              <div className="gateway-col-adr"><strong>Manual review</strong> by a Perth-based specialist.</div>
             </div>
-            <div className="comparison-row">
-              <div className="comparison-feature">Manual Removal Advocacy</div>
-              <div className="comparison-free"><span className="cross">No</span></div>
-              <div className="comparison-adr"><span className="check">Yes</span></div>
+            <div className="gateway-comparison-row">
+              <div className="gateway-col-free">Shows <em>that</em> you were breached.</div>
+              <div className="gateway-col-adr">Identifies <strong>where</strong> your data is currently exposed on broker sites.</div>
             </div>
-            <div className="comparison-row">
-              <div className="comparison-feature">Ongoing Risk Mitigation</div>
-              <div className="comparison-free"><span className="cross">No</span></div>
-              <div className="comparison-adr"><span className="check">Yes</span></div>
-            </div>
-            <div className="comparison-row">
-              <div className="comparison-feature">Australian Specialist Support</div>
-              <div className="comparison-free"><span className="cross">No</span></div>
-              <div className="comparison-adr"><span className="check">Yes</span></div>
+            <div className="gateway-comparison-row">
+              <div className="gateway-col-free">No remediation or strategy.</div>
+              <div className="gateway-col-adr">Provides a tailored removal and advocacy strategy.</div>
             </div>
           </div>
-          <div className="comparison-bridge">
-            <p>HIBP confirms the breach; ADR handles the cleanup. While free tools identify exposure, our human-led process actively removes your sensitive data from the sources that expose you.</p>
-          </div>
+        </section>
+
+        {/* Services / Pricing Cards */}
+        <section className="section reveal container" id="services">
+          <p className="section-label">Services</p>
+          <h2>Choose Your Service</h2>
+          <p className="section-intro">
+            Professional digital exposure audits and manual removal services.
+          </p>
+          <Arsenal />
         </section>
 
         {/* How It Works */}
@@ -185,16 +192,6 @@ const App = () => {
               <p>Act on the findings yourself or engage us to perform the full Digital Clean-Up service.</p>
             </div>
           </div>
-        </section>
-
-        {/* Services */}
-        <section className="section reveal container" id="services">
-          <p className="section-label">Services</p>
-          <h2>Choose Your Service</h2>
-          <p className="section-intro">
-            Professional digital exposure audits and manual removal services.
-          </p>
-          <Arsenal />
         </section>
 
         {/* How We Use Technology */}

@@ -6,45 +6,49 @@ const Arsenal = () => {
       id: 1,
       name: 'Personal Data Exposure Audit',
       price: 'AUD $200',
-      desc: 'A manual, investigator-led review to identify where your personal information is visible across major data brokers and public directories.',
+      focus: 'Mapping the Problem',
+      desc: 'A comprehensive manual investigation of your digital footprint across data brokers and search sites.',
       specs: [
         'Specialist investigation of broker exposure',
         'Digital Risk Summary & findings',
         'Strategic advice for manual removal',
         'Typically delivered within 48 business hours'
       ],
-      buttonText: 'Analyze My Exposure',
+      buttonText: 'Start Manual Audit',
       href: '/checkout/audit',
       recommended: false
     },
     {
       id: 2,
-      name: 'Founding Member Privacy Package',
+      name: 'Founding Member Package',
       price: 'AUD $700',
-      desc: 'An exclusive early-adopter package combining our full audit suite with priority removal advocacy and human-led privacy support.',
+      focus: 'Active Protection',
+      desc: 'Full exposure audit plus 12 months of active removal advocacy and ongoing monitoring.',
       specs: [
         'Priority Digital Exposure Audit',
         'Comprehensive removal advocacy',
         'Direct specialist consultation',
         'Founding Member certificate',
-        'Limited early supporter offer'
+        '12 months ongoing monitoring'
       ],
       buttonText: 'Secure My Identity',
       href: '/checkout/founding-member',
-      recommended: true
+      recommended: true,
+      badge: 'Founding Tier'
     },
     {
       id: 3,
-      name: 'Digital Clean-Up Advocacy',
+      name: 'Full Digital Clean-Up',
       price: 'AUD $1,000',
-      desc: 'Human-led removal requests and opt-out submissions for identified exposures, including direct follow-up and progress documentation.',
+      focus: 'Total Resolution',
+      desc: 'Enterprise-grade eradication of your personal data from public sources and specialist investigation.',
       specs: [
         'Professional removal request management',
         'Up to 15 targeted removal submissions',
         'Post-request follow-up for persistent listings',
         'Final status report & documentation'
       ],
-      buttonText: 'Eradicate My Footprint',
+      buttonText: 'Request Full Clean-Up',
       href: '/checkout/cleanup',
       recommended: false
     },
@@ -68,7 +72,8 @@ const Arsenal = () => {
       <div className="product-grid">
         {primaryProducts.map(product => (
           <div key={product.id} className={`product-card ${product.recommended ? 'recommended' : ''}`}>
-            {product.recommended && <span className="recommended-badge">Recommended</span>}
+            {product.badge && <span className="recommended-badge">{product.badge}</span>}
+            <p className="product-focus">{product.focus}</p>
             <div className="product-header">
               <h3>{product.name}</h3>
               <div className="price">{product.price}</div>

@@ -293,6 +293,87 @@ button.primary:hover {
   color: var(--bg-primary);
 }
 
+.cta-link.secondary {
+  background: transparent;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+}
+
+.cta-link.secondary:hover {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+}
+
+/* Gateway Section */
+.gateway-cta {
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.gateway-comparison {
+  max-width: 800px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gateway-comparison-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.gateway-comparison-header > div {
+  padding: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.gateway-col-free {
+  color: var(--text-muted);
+}
+
+.gateway-col-adr {
+  color: var(--accent-gold);
+  border-left: 1px solid var(--border-subtle);
+}
+
+.gateway-comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.gateway-comparison-row:last-child {
+  border-bottom: none;
+}
+
+.gateway-comparison-row > div {
+  padding: var(--space-sm);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.gateway-comparison-row .gateway-col-free {
+  color: var(--text-muted);
+}
+
+.gateway-comparison-row .gateway-col-adr {
+  color: var(--text-main);
+  background: rgba(184, 152, 106, 0.03);
+}
+
+@media (max-width: 600px) {
+  .gateway-comparison-header > div,
+  .gateway-comparison-row > div {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
 .hero-note {
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -625,6 +706,16 @@ button.primary:hover {
   text-transform: uppercase;
   padding: 0.375rem 0.75rem;
   border-radius: 0 0 4px 4px;
+}
+
+.product-focus {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 0.5rem;
 }
 
 .product-header {
