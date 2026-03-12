@@ -69,6 +69,19 @@ const App = () => {
 
   return (
     <div className="app-container">
+      {/* Site Header */}
+      <header className="site-header">
+        <div className="header-inner">
+          <a href="/" className="header-logo">ADR</a>
+          <nav className="header-nav">
+            <a href="#services">Services</a>
+            <a href="/resources">Resources</a>
+            <a href="/exposure-radar">Exposure Radar</a>
+          </nav>
+          <a href="/checkout/founding-member" className="header-cta">Become a Founding Member</a>
+        </div>
+      </header>
+
       {/* Watchdog Security Indicator */}
       <div className="watchdog-bar">
         <div className="watchdog-inner">
@@ -142,6 +155,30 @@ const App = () => {
               Get a Professional Exposure Audit
             </a>
           </div>
+        </section>
+
+        {/* Exposure Radar Preview */}
+        <section className="section reveal container" id="radar-preview">
+          <p className="section-label">Security Alerts</p>
+          <h2>Exposure Radar</h2>
+          <p className="section-intro">
+            Stay informed about recent data breaches and privacy incidents affecting Australians.
+          </p>
+          <div className="radar-preview-grid">
+            <div className="radar-preview-item">
+              <span className="radar-date">March 2026</span>
+              <h3>Major Australian Retailer Breach</h3>
+              <p>Customer data including names, emails, and purchase history exposed.</p>
+            </div>
+            <div className="radar-preview-item">
+              <span className="radar-date">February 2026</span>
+              <h3>Healthcare Provider Data Leak</h3>
+              <p>Patient records from multiple clinics found on data broker sites.</p>
+            </div>
+          </div>
+          <a href="/exposure-radar" className="cta-link secondary" style={{marginTop: 'var(--space-md)', display: 'inline-block'}}>
+            View All Alerts
+          </a>
         </section>
 
         {/* Services / Pricing Cards */}
