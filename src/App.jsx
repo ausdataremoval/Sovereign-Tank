@@ -72,17 +72,9 @@ const App = () => {
                 We find it, document it, and help you remove it. Manually. By a real person.
               </p>
               <div className="hero-actions">
-                <button
-                  className="primary"
-                  data-paperform-id="t86h5x0u"
-                  data-popup-button="1"
-                  onClick={() => {
-                    setIsLoading(true);
-                    setTimeout(() => setIsLoading(false), 3000);
-                  }}
-                >
-                  Get Help With a Removal
-                </button>
+                <a href="/start" className="cta-link primary">
+                  Start My Exposure Audit
+                </a>
               </div>
               <p className="hero-note">
                 Secure checkout. Manual handling. Digital Risk Summary typically delivered within 48 business hours.
