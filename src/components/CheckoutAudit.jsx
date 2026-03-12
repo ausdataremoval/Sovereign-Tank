@@ -4,6 +4,10 @@ export default function CheckoutAudit() {
 
   return (
     <main className="checkout-page">
+      <div className="checkout-security-bar">
+        <span className="security-pulse"></span>
+        <span>SECURE CHECKOUT</span>
+      </div>
       <div className="checkout-container">
         <div className="checkout-card">
           <h1>Exposure Audit</h1>
@@ -13,9 +17,10 @@ export default function CheckoutAudit() {
           <a href={stripeLink} className="checkout-btn">
             Pay AUD $200
           </a>
-          <p className="checkout-note">
-            Secure payment via Stripe.
-          </p>
+          <div className="checkout-security">
+            <p className="checkout-note">256-bit SSL encryption via Stripe</p>
+            <p className="checkout-note">No card data stored on our servers</p>
+          </div>
         </div>
       </div>
     </main>

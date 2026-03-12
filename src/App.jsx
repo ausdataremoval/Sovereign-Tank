@@ -61,6 +61,15 @@ const App = () => {
 
   return (
     <div className="app-container">
+      {/* Watchdog Security Indicator */}
+      <div className="watchdog-bar">
+        <div className="watchdog-inner">
+          <span className="watchdog-pulse"></span>
+          <span className="watchdog-label">WATCHDOG: SECURE</span>
+          <span className="watchdog-details">HTTPS • No Tracking • AU Data Handling</span>
+        </div>
+      </div>
+
       <main>
         {/* Hero Section */}
         <section className="section reveal" id="hero">

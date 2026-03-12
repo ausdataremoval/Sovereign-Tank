@@ -4,8 +4,8 @@ const TrustSection = () => {
   const markers = [
     'Australian-owned',
     'Perth-based',
-    'Secure payments',
-    'Privacy-first handling',
+    'Encrypted connections',
+    'No tracking cookies',
     'Manual case review'
   ];
 
