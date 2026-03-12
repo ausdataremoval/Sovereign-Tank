@@ -1,33 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Colors - Premium Legal Services Theme */
-  --bg-primary: #08080A;
-  --bg-secondary: #0C0C0E;
-  --bg-panel: #111114;
-  --bg-elevated: #18181C;
-  --accent-gold: #B8986A;
-  --accent-gold-light: #CEAD7D;
-  --accent-gold-dim: rgba(184, 152, 106, 0.08);
-  --text-main: #EDEBE8;
-  --text-muted: #8E8A82;
-  --text-subtle: #5A574F;
-  --border-subtle: rgba(184, 152, 106, 0.06);
-  --border-gold: rgba(184, 152, 106, 0.15);
-  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.5);
-  --shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 40px rgba(184, 152, 106, 0.06);
+  /* Colors - Elite Law Firm Theme */
+  --bg-primary: #050507;
+  --bg-secondary: #0A0A0D;
+  --bg-panel: #0F0F13;
+  --bg-elevated: #141418;
+  --accent-gold: #D4A853;
+  --accent-gold-light: #E6C171;
+  --accent-gold-dim: rgba(212, 168, 83, 0.08);
+  --text-main: #F5F3F0;
+  --text-muted: #9A9590;
+  --text-subtle: #5C5852;
+  --border-subtle: rgba(212, 168, 83, 0.08);
+  --border-gold: rgba(212, 168, 83, 0.2);
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.6);
+  --shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 60px rgba(212, 168, 83, 0.1);
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
 
-  /* Spacing - More generous for premium feel */
-  --space-xs: 0.625rem;
-  --space-sm: 1.25rem;
-  --space-md: 2.5rem;
-  --space-lg: 5rem;
-  --space-xl: 8rem;
+  /* Spacing - Generous premium feel */
+  --space-xs: 0.75rem;
+  --space-sm: 1.5rem;
+  --space-md: 3rem;
+  --space-lg: 6rem;
+  --space-xl: 10rem;
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -42,12 +42,13 @@
 
 /* Site Header */
 .site-header {
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 1rem 0;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(5, 5, 7, 0.95) 100%);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 1.25rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(12px);
 }
 
 .header-inner {
@@ -62,11 +63,11 @@
 
 .header-logo {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.75rem;
+  font-weight: 700;
   color: var(--accent-gold);
   text-decoration: none;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .header-nav {
@@ -118,13 +119,16 @@
 }
 
 body {
-  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-elevated) 100%);
+  background: 
+    radial-gradient(ellipse 120% 80% at 50% 0%, rgba(212, 168, 83, 0.03) 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg-primary) 0%, #070709 40%, var(--bg-elevated) 100%);
   background-attachment: fixed;
   color: var(--text-main);
   font-family: var(--font-sans);
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.01em;
 }
 
 /* Watchdog Security Bar */
@@ -380,29 +384,42 @@ button.primary:hover {
   text-align: center;
 }
 
+.section h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-sm);
+  color: var(--text-main);
+}
+
 .section-label {
   font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent-gold);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .section-intro {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 1.0625rem;
   margin-bottom: var(--space-md);
-  max-width: 560px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: calc(var(--space-xl) * 1.5) 0;
+    padding: calc(var(--space-xl) * 1.25) 0;
+  }
+
+  .section h2 {
+    margin-bottom: var(--space-md);
   }
 
   .container {
@@ -475,11 +492,11 @@ button.primary:hover {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 5vw, 3.25rem);
-  line-height: 1.15;
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  line-height: 1.1;
   margin-bottom: var(--space-sm);
-  letter-spacing: -0.01em;
-  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-weight: 600;
   color: var(--text-main);
   text-wrap: balance;
 }
