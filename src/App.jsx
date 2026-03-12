@@ -170,9 +170,9 @@ const App = () => {
             <div className="footer-brand">
               <h4>Australian Data Removal</h4>
               <p>Australian-led digital exposure audit and manual data removal services.</p>
-              <p className="footer-abn">ABN 86 921 751 764</p>
-              <p className="footer-location">Perth, Western Australia</p>
-              <p className="footer-operator">Operated by the registered ABN holder</p>
+              <p className="footer-company">Australian Data Removal Pty Ltd</p>
+              <p className="footer-acn">ACN 695 272 836</p>
+              <p className="footer-location">Western Australia</p>
             </div>
             <div className="footer-links">
               <h5>COMPANY</h5>
@@ -187,7 +187,7 @@ const App = () => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} Australian Data Removal (ABN 86 921 751 764). All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Australian Data Removal Pty Ltd (ACN 695 272 836). All rights reserved.</p>
             <p>Australian-owned and operated. Manual case handling. Best-efforts data removal advocacy.</p>
           </div>
         </div>
@@ -210,7 +210,7 @@ const App = () => {
             <h2>{legalContent === 'privacy' ? 'Privacy Policy' : 'Terms of Service'}</h2>
             {legalContent === 'privacy' ? (
               <div className="legal-text">
-                <p className="legal-intro">Australian Data Removal (ABN 86 921 751 764, "we", "us", "our") is committed to protecting your privacy in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).</p>
+                <p className="legal-intro">Australian Data Removal Pty Ltd (ACN 695 272 836, "we", "us", "our") is committed to protecting your privacy in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).</p>
                 
                 <h3>1. Information We Collect</h3>
                 <p>We collect personal information necessary to provide our data exposure audit and removal services, including:</p>
@@ -253,13 +253,13 @@ const App = () => {
                 <p>If you believe we have breached your privacy, please contact us at hello@ausdataremoval.com.au. If you are not satisfied with our response, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au.</p>
                 
                 <h3>8. Contact</h3>
-                <p>Australian Data Removal<br />ABN 86 921 751 764<br />Operated by the registered ABN holder<br />Perth, Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
+                <p>Australian Data Removal Pty Ltd<br />ACN 695 272 836<br />Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
                 
                 <p className="legal-updated">Last updated: March 2026</p>
               </div>
             ) : (
               <div className="legal-text">
-                <p className="legal-intro">These Terms of Service ("Terms") govern your use of the services provided by Australian Data Removal (ABN 86 921 751 764, "we", "us", "our").</p>
+                <p className="legal-intro">These Terms of Service ("Terms") govern your use of the services provided by Australian Data Removal Pty Ltd (ACN 695 272 836, "we", "us", "our").</p>
                 
                 <h3>1. Services</h3>
                 <p>Australian Data Removal provides manual data exposure audits and data removal services. We investigate where your personal information appears online and, where engaged, submit removal and opt-out requests on your behalf.</p>
@@ -309,7 +309,7 @@ const App = () => {
                 <p>We may update these Terms from time to time. The current version will always be available on our website.</p>
                 
                 <h3>11. Contact</h3>
-                <p>Australian Data Removal<br />ABN 86 921 751 764<br />Operated by the registered ABN holder<br />Perth, Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
+                <p>Australian Data Removal Pty Ltd<br />ACN 695 272 836<br />Western Australia<br />hello@ausdataremoval.com.au<br />1300 504 079</p>
                 
                 <p className="legal-updated">Last updated: March 2026</p>
               </div>
