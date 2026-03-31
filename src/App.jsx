@@ -3,6 +3,10 @@ import OperationsTicker from './components/OperationsTicker';
 import Arsenal from './components/Arsenal';
 import DeedModal from './components/DeedModal';
 import TrustSection from './components/TrustSection';
+import Aria from './components/Aria';
+import InvestorPitch from './components/InvestorPitch';
+import PartnerProgram from './components/PartnerProgram';
+import CompanionProgram from './components/CompanionProgram';
 
 const App = () => {
   const [showDeed, setShowDeed] = useState(false);
@@ -35,7 +39,7 @@ const App = () => {
         if (data.event === 'PaperformSubmission' || data.type === 'PaperformSubmission') {
           triggerSuccess();
         }
-      } catch (e) {
+      } catch {
         if (event.data === 'PaperformSubmission') triggerSuccess();
       }
     };
@@ -127,13 +131,22 @@ const App = () => {
         </section>
 
         {/* The Arsenal: Product Tiers */}
-        <section className="section reveal" id="the-arsenal">
+        <section className="section reveal" id="services">
           <h2>Services</h2>
           <p className="section-intro">
             Professional data removal audits and manual eradication protocols.
           </p>
           <Arsenal />
         </section>
+
+        {/* Investor Pitch */}
+        <InvestorPitch />
+
+        {/* Partner Program */}
+        <PartnerProgram />
+
+        {/* Companion Program */}
+        <CompanionProgram />
       </main>
 
       <footer className="system-footer">
@@ -215,6 +228,9 @@ const App = () => {
       )}
 
       {showDeed && <DeedModal onClose={() => setShowDeed(false)} />}
+
+      {/* Floating Aria Chat Widget */}
+      <Aria />
     </div>
   )
 }
