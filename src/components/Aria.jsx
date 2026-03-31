@@ -69,6 +69,12 @@ const Aria = () => {
   }, [messages]);
 
   useEffect(() => {
+    const handleOpen = () => setOpen(true);
+    window.addEventListener('openAria', handleOpen);
+    return () => window.removeEventListener('openAria', handleOpen);
+  }, []);
+
+  useEffect(() => {
     if (open && !startedRef.current) {
       startedRef.current = true;
       const timer = setTimeout(() => {

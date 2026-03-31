@@ -7,6 +7,8 @@ import Aria from './components/Aria';
 import InvestorPitch from './components/InvestorPitch';
 import PartnerProgram from './components/PartnerProgram';
 import CompanionProgram from './components/CompanionProgram';
+import SoloLiving from './components/SoloLiving';
+import SecurityEducation from './components/SecurityEducation';
 
 const App = () => {
   const [showDeed, setShowDeed] = useState(false);
@@ -139,6 +141,12 @@ const App = () => {
           <Arsenal />
         </section>
 
+        {/* Solo Living */}
+        <SoloLiving />
+
+        {/* Security Education */}
+        <SecurityEducation />
+
         {/* Investor Pitch */}
         <InvestorPitch />
 
@@ -147,6 +155,50 @@ const App = () => {
 
         {/* Companion Program */}
         <CompanionProgram />
+
+        {/* Contact Section */}
+        <section className="section reveal" id="contact">
+          <div style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>
+            <h2 style={{ justifyContent: 'center' }}>Come and See Us</h2>
+            <p className="section-subtitle" style={{ textAlign: 'center' }}>
+              We're Perth-based and we prefer real conversations.
+            </p>
+          </div>
+          <div className="contact-options-grid">
+            <div className="contact-option">
+              <div className="contact-option-label">VISIT US</div>
+              <p className="contact-option-body">
+                You're welcome to come in and sit down with us. No agenda. No presentation. Just a
+                conversation about what you're trying to do and whether we can help.
+              </p>
+              <a
+                href="mailto:hello@ausdataremoval.com.au?subject=Office%20Visit"
+                className="companion-btn"
+                style={{ display: 'inline-block', marginTop: 'var(--space-sm)', padding: '0.75rem 1.5rem' }}
+              >
+                Book a time
+              </a>
+            </div>
+            <div className="contact-option">
+              <div className="contact-option-label">WE'LL COME TO YOU</div>
+              <p className="contact-option-body">
+                For corporate and enterprise enquiries, we're happy to meet at your workplace. We find
+                that conversations in your own environment tend to be more useful for everyone.
+              </p>
+              <a
+                href="mailto:hello@ausdataremoval.com.au?subject=Corporate%20Meeting%20Request"
+                className="companion-btn"
+                style={{ display: 'inline-block', marginTop: 'var(--space-sm)', padding: '0.75rem 1.5rem' }}
+              >
+                Get in touch
+              </a>
+            </div>
+          </div>
+          <p className="contact-no-demo">
+            We don't do presentations. We don't show products. We have a conversation, understand your
+            situation, and tell you honestly whether we can help.
+          </p>
+        </section>
       </main>
 
       <footer className="system-footer">
@@ -185,6 +237,12 @@ const App = () => {
               <span className="badge-text">WATCHDOG: SECURE</span>
               <span className="badge-id">ID: ADR-P1-ALPHA</span>
             </div>
+          </div>
+
+          <div className="footer-location-section">
+            <p className="footer-label">LOCATION</p>
+            <p className="footer-location-city">PERTH, WESTERN AUSTRALIA</p>
+            <p className="footer-location-reach">Operating nationally. Available internationally.</p>
           </div>
         </div>
       </footer>
